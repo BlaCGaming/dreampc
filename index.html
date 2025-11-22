@@ -299,16 +299,22 @@ nav {
   }
 }
 
-@media (max-width: 640px) {
-  .nav-links {
-    display: none;
-  }
-}
-
 .logo {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
+  z-index: 101;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-text);
+  cursor: pointer;
+  z-index: 101;
 }
 
 .nav-links {
@@ -329,11 +335,72 @@ nav {
   color: var(--color-primary);
 }
 
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-surface);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links li {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.3s ease;
+  }
+  
+  .nav-links.active li {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: 0.2s;
+  }
+  
+  /* Overlay */
+  .nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(2px);
+  }
+  
+  .nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+
 .hero {
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--space-64) var(--space-24);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -440,6 +507,8 @@ section {
   padding: var(--space-64) var(--space-24);
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 section h2 {
@@ -1708,14 +1777,22 @@ footer {
   object-fit: contain;
   opacity: 0.85;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
+  /* Standard for dark mode: invert black logos to white */
+  filter: none;
   padding: 4px;
   border-radius: 4px;
 }
 
+/* Dark mode handling for logos */
+@media (prefers-color-scheme: dark) {
+  .manufacturer-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+  }
+}
+
 .option-card:hover .manufacturer-logo {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
 }
 
@@ -1733,6 +1810,12 @@ footer {
   margin-bottom: 1rem;
   filter: brightness(0.95);
   transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .platform-logo {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .platform-card:hover .platform-logo {
@@ -2055,7 +2138,9 @@ footer {
     <header>
         <nav>
             <div class="logo">Dream PC</div>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+            <div class="nav-overlay" id="nav-overlay"></div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#pc-ratgeber">PC Ratgeber</a></li>
                 <li><a href="#pc-konfigurator">Konfigurator</a></li>
@@ -2413,12 +2498,12 @@ footer {
                     <h3>Wähle deine CPU-Plattform</h3>
                     <div class="platform-grid">
                         <div class="platform-card" data-platform="amd">
-                            <img class="platform-logo" src="https://logo.svgcdn.com/l/amd.svg" alt="AMD">
+                            <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg" alt="AMD">
                             <h4>AMD Ryzen</h4>
                             <p>Hervorragende Multi-Core-Performance für Gaming und Produktivität</p>
                         </div>
                         <div class="platform-card" data-platform="intel">
-                            <img class="platform-logo" src="https://logo.svgcdn.com/l/intel.svg" alt="Intel">
+                            <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg" alt="Intel">
                             <h4>Intel Core</h4>
                             <p>Führende Single-Core-Performance für höchste FPS</p>
                         </div>
@@ -2554,17 +2639,18 @@ const appState = {
   configHistory: []
 };
 
+// Updated Log URLs using reliable SVG sources (Wikimedia Commons)
 const manufacturerLogos = {
-  amd: "https://logo.svgcdn.com/l/amd.svg",
-  intel: "https://logo.svgcdn.com/l/intel.svg",
-  nvidia: "https://logo.svgcdn.com/l/nvidia.svg",
-  asus: "https://logo.svgcdn.com/l/asus.svg",
-  msi: "https://www.vectorlogo.zone/logos/msi/msi-icon.svg",
-  gigabyte: "https://www.vectorlogo.zone/logos/gigabyte/gigabyte-icon.svg",
-  asrock: "https://www.vectorlogo.zone/logos/asrock/asrock-icon.svg",
-  corsair: "https://logo.svgcdn.com/l/corsair.svg",
-  samsung: "https://logo.svgcdn.com/l/samsung.svg",
-  wd: "https://www.vectorlogo.zone/logos/westerndigital/westerndigital-icon.svg"
+  amd: "https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg",
+  intel: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg",
+  nvidia: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg",
+  asus: "https://upload.wikimedia.org/wikipedia/commons/2/20/ASUS_Logo.svg", 
+  msi: "https://upload.wikimedia.org/wikipedia/commons/f/f5/MSI_Logo.svg",
+  gigabyte: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Gigabyte_Technology_logo_20080107.svg",
+  asrock: "https://upload.wikimedia.org/wikipedia/commons/e/e9/ASRock_logo_201x.svg",
+  corsair: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Corsair_logo_2020.svg",
+  samsung: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+  wd: "https://upload.wikimedia.org/wikipedia/commons/9/90/Western_Digital_logo.svg"
 };
 
 const gameBenchmarks = {
@@ -3792,6 +3878,15 @@ function setupSmoothScroll() {
       const href = this.getAttribute('href');
       if (href && href.startsWith('#')) {
         e.preventDefault();
+        
+        // Close mobile menu if open
+        const nav = document.getElementById('nav-links');
+        const overlay = document.getElementById('nav-overlay');
+        if (nav && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
 
@@ -3804,6 +3899,24 @@ function setupSmoothScroll() {
       }
     });
   });
+}
+
+function setupMobileMenu() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('nav-overlay');
+
+    if (menuToggle && navLinks && overlay) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    }
 }
 
 function setupForm() {
@@ -3940,7 +4053,7 @@ function createParticles() {
   
   // Detect mobile and reduce particles dramatically
   const isMobile = window.innerWidth < 768;
-  const particleCount = isMobile ? 20 : 80;
+  const particleCount = isMobile ? 15 : 60; // Reduced for performance
   
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
@@ -3970,7 +4083,8 @@ function createParticles() {
       border-radius: 50%;
       left: ${x}%;
       top: ${y}%;
-      filter: blur(0.5px);
+      /* Removed blur filter on mobile for performance */
+      ${isMobile ? '' : 'filter: blur(0.5px);'}
       box-shadow: 0 0 ${size * 2}px hsla(${hue}, ${saturation}%, 65%, ${opacity * 0.5});
       animation: float ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s infinite;
       will-change: transform, opacity;
@@ -3980,7 +4094,7 @@ function createParticles() {
   }
   
   // Add accent particles (reduced on mobile)
-  const accentCount = isMobile ? 5 : 15;
+  const accentCount = isMobile ? 4 : 15;
   for (let i = 0; i < accentCount; i++) {
     const accent = document.createElement('div');
     accent.className = 'particle-accent';
@@ -4003,7 +4117,7 @@ function createParticles() {
       border-radius: 50%;
       left: ${x}%;
       top: ${y}%;
-      filter: blur(2px);
+      ${isMobile ? '' : 'filter: blur(2px);'}
       animation: float-accent ${duration}s ease-in-out ${delay}s infinite;
       will-change: transform, opacity;
     `;
@@ -4021,6 +4135,7 @@ function init() {
   setupForm();
   initConfigurator();
   setupCompleteBuildButton();
+  setupMobileMenu(); // New function for mobile nav
   
   console.log('App initialized successfully.');
 }
