@@ -1,0 +1,4035 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Dream PC - Dein individueller Gaming-PC</title>
+    <style>
+:root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-smooth: 300ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(20px, -40px, 0) scale(1.1);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(40px, -100px, 0) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes float-accent {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(30px, -50px, 0) scale(1.2);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+}
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+  .particle {
+    filter: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Prevent text overflow globally */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button, .component-card, .option-card, .mode-card, .platform-card, .game-card {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  font-size: var(--font-size-base);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-card-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+.logo {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-32);
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--duration-fast) var(--ease-standard);
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-64) var(--space-24);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.hero p {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-32);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    padding: 0 1rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 0.75rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  padding: var(--space-16) var(--space-32);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+.cta-button:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-64) var(--space-24);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2rem 0.75rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.guide-interactive {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  margin-bottom: var(--space-32);
+  border: 1px solid var(--color-card-border);
+}
+
+.selector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-32);
+}
+
+.guide-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.guide-selector label {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.selector-section {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.selector-section.active {
+  border-color: var(--color-primary);
+}
+
+.selector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.selector-header:hover {
+  background: rgba(var(--color-teal-500-rgb), 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .selector-header:hover {
+    background: rgba(var(--color-teal-300-rgb), 0.05);
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.selector-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h3 {
+  font-size: var(--font-size-xl);
+  margin: 0 0 0.25rem 0;
+  color: var(--color-text);
+}
+
+.selected-preview {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+.expand-arrow {
+  flex-shrink: 0;
+  color: var(--color-text);
+  transition: transform 0.3s ease;
+}
+
+.selector-section.active .expand-arrow {
+  transform: rotate(180deg);
+}
+
+.selector-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+}
+
+.selector-content.expanded {
+  max-height: 800px;
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.options-grid .option-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-card-border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.options-grid .option-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+}
+
+.options-grid .option-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-1);
+}
+
+.options-grid .option-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+.options-grid .option-card p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.selector-container {
+  position: relative;
+}
+
+
+
+.selector-trigger {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: 1rem 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.selector-trigger:hover {
+  border-color: var(--color-primary);
+}
+
+
+
+.selector-trigger:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+.selected-value {
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+}
+
+.selector-menu {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  margin-top: var(--space-8);
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.selector-menu.collapsed {
+  max-height: 0;
+  opacity: 0;
+  border-width: 0;
+  margin-top: 0;
+}
+
+.selector-menu.expanded {
+  max-height: 400px;
+  opacity: 1;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.menu-option {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(var(--color-brown-600-rgb), 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-option .option-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.menu-option .option-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.menu-option:not(:has(.option-content)) {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (prefers-color-scheme: dark) {
+  .menu-option {
+    border-bottom: 1px solid rgba(var(--color-gray-400-rgb), 0.1);
+  }
+}
+
+.menu-option:last-child {
+  border-bottom: none;
+}
+
+.menu-option:hover {
+  background: rgba(var(--color-teal-500-rgb), 0.1);
+}
+
+.menu-option.selected {
+  background: rgba(var(--color-teal-500-rgb), 0.15);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.build-recommendation {
+  background: var(--color-bg-1);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  animation: fadeIn var(--duration-smooth) var(--ease-standard);
+}
+
+.build-recommendation h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-24);
+  color: var(--color-primary);
+}
+
+.component-list {
+  display: grid;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+.component-item {
+  background-color: var(--color-surface);
+  padding: var(--space-16);
+  border-radius: var(--radius-base);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-card-border-inner);
+}
+
+.component-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.component-value {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.fps-expectations {
+  background-color: var(--color-surface);
+  padding: var(--space-20);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--color-primary);
+}
+
+.fps-expectations h4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-12);
+  color: var(--color-text);
+}
+
+.fps-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.fps-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-base);
+}
+
+.fps-item span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.fps-item span:last-child {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.games-widget {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-top: 2rem;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.games-widget h3 {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.game-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.game-controls select {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  transition: all 0.25s ease;
+}
+
+.game-controls select:hover {
+  border-color: var(--color-primary);
+}
+
+.game-controls select:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+.game-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-card-border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.game-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+}
+
+.game-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-1);
+}
+
+.game-card h4 {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.benchmark-display {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  animation: fadeIn var(--duration-smooth) var(--ease-standard);
+}
+
+.benchmark-display h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-20);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.gpu-benchmarks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-16);
+}
+
+.gpu-benchmark {
+  background-color: var(--color-surface);
+  padding: var(--space-16);
+  border-radius: var(--radius-base);
+  text-align: center;
+  border: 1px solid var(--color-card-border-inner);
+}
+
+.gpu-name {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.fps-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.fps-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.recommendation-badge {
+  display: inline-block;
+  margin-top: var(--space-8);
+  padding: var(--space-4) var(--space-12);
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.config-progress {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto var(--space-48);
+  position: relative;
+}
+
+.config-progress::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--duration-smooth) var(--ease-standard);
+}
+
+.progress-step.active .step-number {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-primary);
+}
+
+.progress-step.completed .step-number {
+  background: var(--color-success);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-success);
+}
+
+.progress-step.completed .step-number::after {
+  content: '✓';
+  position: absolute;
+}
+
+.step-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.progress-step.active .step-label {
+  color: var(--color-primary);
+}
+
+.config-container {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  margin-bottom: var(--space-24);
+  border: 1px solid var(--color-card-border);
+  min-height: 400px;
+  transform: translateZ(0);
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+.config-step h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-32);
+  text-align: center;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-24);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.platform-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(0);
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.platform-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.platform-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-1);
+  box-shadow: var(--shadow-md);
+}
+
+.platform-icon {
+  font-size: 64px;
+  margin-bottom: var(--space-16);
+}
+
+.platform-card h4 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-12);
+  color: var(--color-text);
+}
+
+.platform-card p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-16);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .component-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-20);
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  position: relative;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: fadeInCard 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .option-card {
+    padding: 1rem;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .option-card {
+    padding: 0.8rem;
+    min-height: 110px;
+  }
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+}
+
+.option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.option-card.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-1);
+  box-shadow: var(--shadow-sm);
+}
+
+.option-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.option-card .checkmark {
+  position: absolute;
+  top: var(--space-12);
+  right: var(--space-12);
+  width: 28px;
+  height: 28px;
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.option-card .checkmark.hidden {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.component-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.component-specs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.component-spec {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.component-price {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-top: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.component-badge {
+  display: inline-block;
+  padding: var(--space-4) var(--space-8);
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--space-8);
+}
+
+.warning-badge {
+  background: rgba(var(--color-warning-rgb), 0.15);
+  color: var(--color-warning);
+  border: 1px solid rgba(var(--color-warning-rgb), 0.3);
+}
+
+.config-summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  opacity: 1;
+  z-index: 1;
+}
+
+.config-summary h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-20);
+  color: var(--color-text);
+}
+
+.summary-empty {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--space-32) var(--space-16);
+  font-size: var(--font-size-sm);
+}
+
+.summary-item {
+  padding: var(--space-12);
+  margin-bottom: var(--space-12);
+  background: var(--color-background);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-card-border-inner);
+}
+
+.summary-item-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.summary-item-value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.summary-item-price {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-16);
+  margin: var(--space-20) 0;
+  border-top: 2px solid var(--color-border);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+#total-price {
+  color: var(--color-primary);
+  font-size: var(--font-size-2xl);
+}
+
+.compatibility-status {
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-16);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.compatibility-status.success {
+  background: rgba(var(--color-teal-500-rgb), 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(var(--color-teal-500-rgb), 0.3);
+}
+
+.compatibility-status.error {
+  background: rgba(var(--color-red-500-rgb), 0.15);
+  color: var(--color-error);
+  border: 1px solid rgba(var(--color-red-500-rgb), 0.3);
+}
+
+.compatibility-status.warning {
+  background: rgba(var(--color-warning-rgb), 0.15);
+  color: var(--color-warning);
+  border: 1px solid rgba(var(--color-warning-rgb), 0.3);
+}
+
+.compatibility-status.info {
+  background: rgba(var(--color-info-rgb), 0.15);
+  color: var(--color-info);
+  border: 1px solid rgba(var(--color-info-rgb), 0.3);
+}
+
+.power-info {
+  padding: var(--space-12);
+  background: var(--color-bg-5);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-sm);
+}
+
+.power-info-label {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.power-info-value {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.psu-info {
+  background: var(--color-bg-6);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-base);
+  padding: var(--space-20);
+  margin-bottom: var(--space-24);
+}
+
+.psu-info h4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.psu-info p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+#configurator {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: var(--space-24);
+  align-items: start;
+}
+
+#configurator > h2 {
+  grid-column: 1 / -1;
+}
+
+#configurator > .config-progress {
+  grid-column: 1 / -1;
+}
+
+#configurator > .config-container {
+  grid-column: 1;
+}
+
+#configurator > .config-summary {
+  grid-column: 2;
+}
+
+.config-step {
+  animation: fadeIn var(--duration-smooth) var(--ease-standard);
+}
+
+.appointment-form {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid var(--color-card-border);
+}
+
+.form-group {
+  margin-bottom: var(--space-20);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  transition: all var(--duration-smooth) var(--ease-standard);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-24);
+}
+
+.feedback-card {
+  background-color: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  transition: all var(--duration-smooth) var(--ease-standard);
+}
+
+.feedback-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-16);
+}
+
+.feedback-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.feedback-rating {
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+}
+
+.feedback-text {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-card-border);
+  padding: var(--space-32) var(--space-24);
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.ratgeber-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  animation: slideInFromTop 0.4s ease;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  font-family: var(--font-family-base);
+}
+
+.breadcrumb-back:hover {
+  background: rgba(var(--color-teal-500-rgb), 0.1);
+  transform: translateX(-3px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .breadcrumb-back:hover {
+    background: rgba(var(--color-teal-300-rgb), 0.1);
+  }
+}
+
+.breadcrumb-back svg {
+  transition: transform 0.25s ease;
+}
+
+.breadcrumb-back:hover svg {
+  transform: translateX(-4px);
+}
+
+.breadcrumb-divider {
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+}
+
+.mode-name {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.widget-selector {
+  position: relative;
+  min-width: 150px;
+}
+
+.widget-selector-header {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.widget-selector-header:hover {
+  border-color: var(--color-primary);
+}
+
+.widget-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.widget-selected {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.widget-arrow {
+  transition: transform 0.3s ease;
+  color: var(--color-text);
+}
+
+.widget-selector.active .widget-arrow {
+  transform: rotate(180deg);
+}
+
+.widget-selector-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 100;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.widget-selector-menu.expanded {
+  max-height: 250px;
+  opacity: 1;
+}
+
+.widget-option {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.widget-option:last-child {
+  border-bottom: none;
+}
+
+.widget-option:hover {
+  background: rgba(var(--color-teal-500-rgb), 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .widget-option:hover {
+    background: rgba(var(--color-teal-300-rgb), 0.1);
+  }
+}
+
+.widget-option.selected {
+  background: rgba(var(--color-teal-500-rgb), 0.15);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .widget-option.selected {
+    background: rgba(var(--color-teal-300-rgb), 0.15);
+  }
+}
+
+.manufacturer-logo {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 50px;
+  height: auto;
+  max-height: 30px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.option-card:hover .manufacturer-logo {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* Fallback for failed image loads */
+.manufacturer-logo:not([src]),
+.manufacturer-logo[src=""] {
+  display: none;
+}
+
+.platform-logo {
+  width: 120px;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: brightness(0.95);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.platform-card:hover .platform-logo {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.platform-card.selected .platform-logo {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.config-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+.nav-back-button:hover {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.nav-back-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.nav-steps {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.nav-step {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  background: rgba(var(--color-border), 0.1);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.nav-step:hover {
+  background: rgba(var(--color-teal-500-rgb), 0.1);
+}
+
+.nav-step.completed {
+  background: rgba(var(--color-teal-500-rgb), 0.15);
+  color: var(--color-primary);
+}
+
+.nav-step.active {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mode-card {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ratgeber-mode-selection {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+}
+
+@media (max-width: 768px) {
+  .selector-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .selector-section {
+    margin-bottom: 1rem;
+  }
+  
+  .selector-header {
+    padding: 1rem;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .game-card {
+    min-height: auto;
+    padding: 0.8rem;
+  }
+
+  .gpu-benchmarks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  #configurator {
+    grid-template-columns: 1fr;
+  }
+  
+  .config-summary {
+    position: static;
+    max-height: none;
+  }
+  
+  .config-progress {
+    overflow-x: auto;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  
+  .platform-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .platform-logo {
+    width: 100px !important;
+    max-height: 50px !important;
+  }
+  
+  .manufacturer-logo {
+    width: 40px !important;
+    max-height: 25px !important;
+  }
+  
+  .config-nav-bar {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+  
+  .nav-steps {
+    gap: 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .nav-step {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .component-name {
+    font-size: 1rem;
+  }
+  
+  .component-specs {
+    font-size: 0.85rem;
+  }
+  
+  .component-price {
+    font-size: 1rem;
+  }
+  
+  .platform-logo {
+    width: 80px !important;
+    max-height: 40px !important;
+  }
+  
+  .game-card {
+    padding: 0.6rem;
+  }
+  
+  .game-card h4 {
+    font-size: 0.9rem;
+  }
+  
+  .game-card p {
+    font-size: 0.75rem;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  
+  .option-card {
+    padding: 0.8rem;
+    min-height: 110px;
+  }
+}
+
+.ratgeber-mode-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+  margin-bottom: var(--space-32);
+  padding: var(--space-32);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .ratgeber-mode-selection {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+}
+
+.mode-cards {
+  display: contents;
+}
+
+.mode-card {
+  background: var(--color-bg-1);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .mode-card {
+    padding: 1rem;
+  }
+  
+  .mode-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  .mode-card p {
+    font-size: 0.85rem;
+  }
+}
+
+.mode-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+  background: var(--color-bg-3);
+}
+
+.mode-icon {
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+}
+
+.mode-card h4 {
+  font-size: var(--font-size-xl);
+  margin: 0;
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mode-card p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .mode-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Dream PC</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pc-ratgeber">PC Ratgeber</a></li>
+                <li><a href="#pc-konfigurator">Konfigurator</a></li>
+                <li><a href="#appointment">Termin</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Dein individueller Gaming-PC</h1>
+            <p>Wir bauen hochwertige Gaming-PCs nach deinen Wünschen. Maßgeschneidert, leistungsstark und perfekt auf deine Bedürfnisse abgestimmt.</p>
+            <a href="#pc-ratgeber" class="cta-button">Finde deinen PC</a>
+        </section>
+
+        <section id="pc-ratgeber">
+            <h2>PC Ratgeber</h2>
+            
+            <!-- Mode Selection (visible initially) -->
+            <div class="ratgeber-mode-selection">
+                <div class="mode-cards">
+                    <div class="mode-card" onclick="selectMode('budget')">
+                        <svg class="mode-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        <h4>Budget vorgeben</h4>
+                        <p>Wählen Sie Ihr Budget</p>
+                    </div>
+                    
+                    <div class="mode-card" onclick="selectMode('performance')">
+                        <svg class="mode-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        <h4>FPS-Ziel &amp; Auflösung</h4>
+                        <p>Geben Sie Performance an</p>
+                    </div>
+                    
+                    <div class="mode-card" onclick="selectMode('custom')">
+                        <svg class="mode-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <path d="M6 6h.01M6 18h.01"/>
+                        </svg>
+                        <h4>Komponenten selbst wählen</h4>
+                        <p>Zum Konfigurator</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Breadcrumb (hidden initially) -->
+            <div class="ratgeber-breadcrumb" style="display:none;">
+                <button class="breadcrumb-back" onclick="resetRatgeber()">
+                    ← Zurück zur Auswahl
+                </button>
+                <span class="breadcrumb-divider">/</span>
+                <span class="mode-name"></span>
+            </div>
+            
+            <!-- Anwendung (hidden initially) -->
+            <div class="selector-section" data-selector="usecase" style="display:none;">
+                <div class="selector-header" onclick="toggleSelector(this)">
+                    <div class="header-content">
+                        <span class="selector-icon">🎯</span>
+                        <div class="header-text">
+                            <h3>Anwendung auswählen</h3>
+                            <p class="selected-preview">Wählen Sie Ihre Anwendung...</p>
+                        </div>
+                    </div>
+                    <svg class="expand-arrow" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                
+                <div class="selector-content collapsed">
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption(this, 'usecase', 'Gaming')">
+                            <h4>🎮 Gaming</h4>
+                            <p>Für Spiele optimiert</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'usecase', 'Workstation')">
+                            <h4>💼 Workstation</h4>
+                            <p>Professionelle Arbeit</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'usecase', 'Video Editing')">
+                            <h4>🎬 Video Editing</h4>
+                            <p>Videobearbeitung</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'usecase', 'Allround')">
+                            <h4>⭐ Allround</h4>
+                            <p>Vielseitig einsetzbar</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'usecase', 'Streaming')">
+                            <h4>📹 Streaming</h4>
+                            <p>Live-Streaming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Budget (hidden initially) -->
+            <div class="selector-section" data-selector="budget" style="display:none;">
+                <div class="selector-header" onclick="toggleSelector(this)">
+                    <div class="header-content">
+                        <span class="selector-icon">💰</span>
+                        <div class="header-text">
+                            <h3>Budget auswählen</h3>
+                            <p class="selected-preview">Wählen Sie Ihr Budget...</p>
+                        </div>
+                    </div>
+                    <svg class="expand-arrow" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                
+                <div class="selector-content collapsed">
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption(this, 'budget', '800-1200€')">
+                            <h4>800-1200€</h4>
+                            <p>Einsteiger-Build</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'budget', '1200-2000€')">
+                            <h4>1200-2000€</h4>
+                            <p>Solide Mittelklasse</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'budget', '2000-3500€')">
+                            <h4>2000-3500€</h4>
+                            <p>High-End Gaming</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'budget', '3500€+')">
+                            <h4>3500€+</h4>
+                            <p>Enthusiast-Build</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resolution (hidden initially) - NOW FIRST -->
+            <div class="selector-section" data-selector="resolution" style="display:none;">
+                <div class="selector-header" onclick="toggleSelector(this)">
+                    <div class="header-content">
+                        <span class="selector-icon">🖥️</span>
+                        <div class="header-text">
+                            <h3>Auflösung</h3>
+                            <p class="selected-preview">Wählen Sie Ihre Auflösung...</p>
+                        </div>
+                    </div>
+                    <svg class="expand-arrow" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                
+                <div class="selector-content collapsed">
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption(this, 'resolution', '1080p')">
+                            <h4>1920x1080</h4>
+                            <p>Full HD (1080p)</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'resolution', '1440p')">
+                            <h4>2560x1440</h4>
+                            <p>QHD (1440p)</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'resolution', '4K')">
+                            <h4>3840x2160</h4>
+                            <p>4K Ultra HD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FPS (hidden initially) - NOW SECOND -->
+            <div class="selector-section" data-selector="fps" style="display:none;">
+                <div class="selector-header" onclick="toggleSelector(this)">
+                    <div class="header-content">
+                        <span class="selector-icon">⚡</span>
+                        <div class="header-text">
+                            <h3>FPS Ziel</h3>
+                            <p class="selected-preview">Wählen Sie Ihr FPS-Ziel...</p>
+                        </div>
+                    </div>
+                    <svg class="expand-arrow" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                
+                <div class="selector-content collapsed">
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption(this, 'fps', '60 FPS')">
+                            <h4>60 FPS</h4>
+                            <p>Flüssiges Gaming</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'fps', '120 FPS')">
+                            <h4>120 FPS</h4>
+                            <p>Sehr flüssig</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'fps', '144 FPS')">
+                            <h4>144 FPS</h4>
+                            <p>High Refresh Rate</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'fps', '240 FPS')">
+                            <h4>240 FPS</h4>
+                            <p>E-Sports Gaming</p>
+                        </div>
+                        <div class="option-card" onclick="selectOption(this, 'fps', '360 FPS')">
+                            <h4>360 FPS</h4>
+                            <p>Ultra E-Sports</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="games-widget">
+                <h3>Performance in aktuellen Spielen</h3>
+                
+                <div class="game-controls">
+                    <div class="widget-selector">
+                        <div class="widget-selector-header" onclick="toggleWidgetSelector(this)">
+                            <span class="widget-label">Auflösung: <span class="widget-selected">1080p</span></span>
+                            <svg class="widget-arrow" width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="widget-selector-menu collapsed">
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'resolution', '1080p')">1080p</div>
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'resolution', '1440p')">1440p</div>
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'resolution', '4k')">4K</div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget-selector">
+                        <div class="widget-selector-header" onclick="toggleWidgetSelector(this)">
+                            <span class="widget-label">FPS Ziel: <span class="widget-selected">60</span></span>
+                            <svg class="widget-arrow" width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="widget-selector-menu collapsed">
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'fps', '60')">60 FPS</div>
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'fps', '120')">120 FPS</div>
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'fps', '144')">144 FPS</div>
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'fps', '240')">240 FPS</div>
+                            <div class="widget-option" onclick="selectWidgetOption(this, 'fps', '360')">360 FPS</div>
+                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card" data-game="cyberpunk">
+                        <h4>Cyberpunk 2077</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                    <div class="game-card" data-game="cod">
+                        <h4>Call of Duty MW3</h4>
+                        <p>High Settings</p>
+                    </div>
+                    <div class="game-card" data-game="alanwake">
+                        <h4>Alan Wake 2</h4>
+                        <p>High Settings</p>
+                    </div>
+                    <div class="game-card" data-game="fortnite">
+                        <h4>Fortnite</h4>
+                        <p>Epic Settings</p>
+                    </div>
+                    <div class="game-card" data-game="baldursgate3">
+                        <h4>Baldur's Gate 3</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                    <div class="game-card" data-game="starfield">
+                        <h4>Starfield</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                    <div class="game-card" data-game="hogwarts">
+                        <h4>Hogwarts Legacy</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                    <div class="game-card" data-game="rdr2">
+                        <h4>Red Dead Redemption 2</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                    <div class="game-card" data-game="cs2">
+                        <h4>CS2</h4>
+                        <p>High Settings</p>
+                    </div>
+                    <div class="game-card" data-game="valorant">
+                        <h4>Valorant</h4>
+                        <p>High Settings</p>
+                    </div>
+                    <div class="game-card" data-game="tlou">
+                        <h4>The Last of Us Part I</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                    <div class="game-card" data-game="spiderman">
+                        <h4>Spider-Man Remastered</h4>
+                        <p>Ultra Settings</p>
+                    </div>
+                </div>
+
+                <div id="benchmark-result" class="hidden"></div>
+            </div>
+        </section>
+
+        <section id="pc-konfigurator">
+            <h2>PC Konfigurator</h2>
+            
+            <div class="config-nav-bar" id="config-nav-bar" style="display:none;">
+                <button class="nav-back-button" id="nav-back-btn" onclick="goBackStep()">
+                    ← Zurück
+                </button>
+                <div class="nav-steps">
+                    <span class="nav-step" data-nav-step="1">Plattform</span>
+                    <span class="nav-step" data-nav-step="2">CPU</span>
+                    <span class="nav-step" data-nav-step="3">Mainboard</span>
+                    <span class="nav-step" data-nav-step="4">RAM</span>
+                    <span class="nav-step" data-nav-step="5">GPU</span>
+                    <span class="nav-step" data-nav-step="6">Speicher</span>
+                    <span class="nav-step" data-nav-step="7">Netzteil</span>
+                </div>
+            </div>
+            
+            <div class="config-progress">
+                <div class="progress-step" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Plattform</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">CPU</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Mainboard</div>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">RAM</div>
+                </div>
+                <div class="progress-step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">GPU</div>
+                </div>
+                <div class="progress-step" data-step="6">
+                    <div class="step-number">6</div>
+                    <div class="step-label">Speicher</div>
+                </div>
+                <div class="progress-step" data-step="7">
+                    <div class="step-number">7</div>
+                    <div class="step-label">Netzteil</div>
+                </div>
+            </div>
+
+            <div class="config-container">
+                <div class="config-step" id="step-1" data-step="1">
+                    <h3>Wähle deine CPU-Plattform</h3>
+                    <div class="platform-grid">
+                        <div class="platform-card" data-platform="amd">
+                            <img class="platform-logo" src="https://logo.svgcdn.com/l/amd.svg" alt="AMD">
+                            <h4>AMD Ryzen</h4>
+                            <p>Hervorragende Multi-Core-Performance für Gaming und Produktivität</p>
+                        </div>
+                        <div class="platform-card" data-platform="intel">
+                            <img class="platform-logo" src="https://logo.svgcdn.com/l/intel.svg" alt="Intel">
+                            <h4>Intel Core</h4>
+                            <p>Führende Single-Core-Performance für höchste FPS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="config-step hidden" id="step-2" data-step="2">
+                    <h3>Wähle deinen Prozessor</h3>
+                    <div id="cpu-grid" class="component-grid"></div>
+                </div>
+
+                <div class="config-step hidden" id="step-3" data-step="3">
+                    <h3>Wähle dein Mainboard</h3>
+                    <div id="motherboard-grid" class="component-grid"></div>
+                </div>
+
+                <div class="config-step hidden" id="step-4" data-step="4">
+                    <h3>Wähle deinen Arbeitsspeicher</h3>
+                    <div id="ram-grid" class="component-grid"></div>
+                </div>
+
+                <div class="config-step hidden" id="step-5" data-step="5">
+                    <h3>Wähle deine Grafikkarte</h3>
+                    <div id="gpu-grid" class="component-grid"></div>
+                </div>
+
+                <div class="config-step hidden" id="step-6" data-step="6">
+                    <h3>Wähle deinen Speicher</h3>
+                    <div id="storage-grid" class="component-grid"></div>
+                </div>
+
+                <div class="config-step hidden" id="step-7" data-step="7">
+                    <h3>Wähle dein Netzteil</h3>
+                    <div id="psu-recommendation" class="psu-info"></div>
+                    <div id="psu-grid" class="component-grid"></div>
+                </div>
+            </div>
+
+            <div class="config-summary">
+                <h3>Deine Konfiguration</h3>
+                <div id="summary-content">
+                    <div class="summary-empty">Wähle Komponenten aus, um deine Konfiguration zu sehen</div>
+                </div>
+                <div id="compatibility-status" class="hidden"></div>
+                <div id="power-consumption" class="hidden"></div>
+                <div class="summary-total hidden" id="summary-total">
+                    <span>Gesamtpreis:</span>
+                    <span id="total-price">0€</span>
+                </div>
+                <button class="cta-button" id="complete-build" disabled>Konfiguration abschließen</button>
+            </div>
+        </section>
+
+        <section id="appointment">
+            <h2>Beratungstermin vereinbaren</h2>
+            <div class="appointment-form">
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" placeholder="Erzähle uns von deinen PC-Wünschen..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Termin anfragen</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <h2>Kundenfeedback</h2>
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <span class="feedback-name">Max M.</span>
+                        <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="feedback-text">"Perfekter Gaming-PC! Die Beratung war erstklassig und der PC läuft absolut flüssig. Cyberpunk 2077 auf Ultra mit über 100 FPS!"</p>
+                </div>
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <span class="feedback-name">Sarah K.</span>
+                        <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="feedback-text">"Toller Service und faire Preise. Der Konfigurator hat mir geholfen, den perfekten PC für mein Budget zu finden. Absolut empfehlenswert!"</p>
+                </div>
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <span class="feedback-name">Tom B.</span>
+                        <span class="feedback-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="feedback-text">"Schnelle Lieferung und professioneller Aufbau. Der PC sieht nicht nur fantastisch aus, sondern ist auch extrem leistungsstark!"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dream PC. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+const appState = {
+  currentSelection: {
+    mode: 'budget',
+    usecase: '',
+    budget: '',
+    fps: '',
+    resolution: '',
+    selectedGame: '',
+    gameResolution: '1080p',
+    gameTargetFps: 60
+  },
+  configuratorState: {
+    platform: null,
+    cpu: null,
+    motherboard: null,
+    ram: null,
+    gpu: null,
+    storage: null,
+    psu: null,
+    currentStep: 1
+  },
+  configHistory: []
+};
+
+const manufacturerLogos = {
+  amd: "https://logo.svgcdn.com/l/amd.svg",
+  intel: "https://logo.svgcdn.com/l/intel.svg",
+  nvidia: "https://logo.svgcdn.com/l/nvidia.svg",
+  asus: "https://logo.svgcdn.com/l/asus.svg",
+  msi: "https://www.vectorlogo.zone/logos/msi/msi-icon.svg",
+  gigabyte: "https://www.vectorlogo.zone/logos/gigabyte/gigabyte-icon.svg",
+  asrock: "https://www.vectorlogo.zone/logos/asrock/asrock-icon.svg",
+  corsair: "https://logo.svgcdn.com/l/corsair.svg",
+  samsung: "https://logo.svgcdn.com/l/samsung.svg",
+  wd: "https://www.vectorlogo.zone/logos/westerndigital/westerndigital-icon.svg"
+};
+
+const gameBenchmarks = {
+  cyberpunk: {
+    name: 'Cyberpunk 2077',
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 65, rtx4070: 95, rtx4080: 135, rtx4090: 165 },
+      '1440p': { rtx4060: 45, rtx4070: 70, rtx4080: 105, rtx4090: 140 },
+      '4k': { rtx4060: 25, rtx4070: 42, rtx4080: 68, rtx4090: 95 }
+    }
+  },
+  cod: {
+    name: 'Call of Duty MW3',
+    settings: 'High',
+    benchmarks: {
+      '1080p': { rtx4060: 155, rtx4070: 195, rtx4080: 240, rtx4090: 280 },
+      '1440p': { rtx4060: 110, rtx4070: 145, rtx4080: 190, rtx4090: 240 },
+      '4k': { rtx4060: 65, rtx4070: 90, rtx4080: 135, rtx4090: 180 }
+    }
+  },
+  alanwake: {
+    name: 'Alan Wake 2',
+    settings: 'High',
+    benchmarks: {
+      '1080p': { rtx4060: 50, rtx4070: 75, rtx4080: 110, rtx4090: 145 },
+      '1440p': { rtx4060: 35, rtx4070: 55, rtx4080: 85, rtx4090: 115 },
+      '4k': { rtx4060: 20, rtx4070: 32, rtx4080: 52, rtx4090: 75 }
+    }
+  },
+  fortnite: {
+    name: 'Fortnite',
+    settings: 'Epic',
+    benchmarks: {
+      '1080p': { rtx4060: 180, rtx4070: 240, rtx4080: 300, rtx4090: 350 },
+      '1440p': { rtx4060: 120, rtx4070: 165, rtx4080: 220, rtx4090: 280 },
+      '4k': { rtx4060: 70, rtx4070: 100, rtx4080: 145, rtx4090: 195 }
+    }
+  },
+  baldursgate3: {
+    name: "Baldur's Gate 3",
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 75, rtx4070: 110, rtx4080: 145, rtx4090: 180 },
+      '1440p': { rtx4060: 50, rtx4070: 80, rtx4080: 115, rtx4090: 150 },
+      '4k': { rtx4060: 28, rtx4070: 45, rtx4080: 70, rtx4090: 95 }
+    }
+  },
+  starfield: {
+    name: 'Starfield',
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 60, rtx4070: 85, rtx4080: 120, rtx4090: 155 },
+      '1440p': { rtx4060: 42, rtx4070: 65, rtx4080: 95, rtx4090: 125 },
+      '4k': { rtx4060: 24, rtx4070: 38, rtx4080: 58, rtx4090: 78 }
+    }
+  },
+  hogwarts: {
+    name: 'Hogwarts Legacy',
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 70, rtx4070: 100, rtx4080: 140, rtx4090: 175 },
+      '1440p': { rtx4060: 48, rtx4070: 72, rtx4080: 105, rtx4090: 140 },
+      '4k': { rtx4060: 27, rtx4070: 42, rtx4080: 65, rtx4090: 88 }
+    }
+  },
+  rdr2: {
+    name: 'Red Dead Redemption 2',
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 65, rtx4070: 95, rtx4080: 130, rtx4090: 165 },
+      '1440p': { rtx4060: 45, rtx4070: 68, rtx4080: 98, rtx4090: 132 },
+      '4k': { rtx4060: 25, rtx4070: 40, rtx4080: 62, rtx4090: 85 }
+    }
+  },
+  cs2: {
+    name: 'CS2',
+    settings: 'High',
+    benchmarks: {
+      '1080p': { rtx4060: 280, rtx4070: 350, rtx4080: 420, rtx4090: 500 },
+      '1440p': { rtx4060: 200, rtx4070: 280, rtx4080: 360, rtx4090: 450 },
+      '4k': { rtx4060: 120, rtx4070: 180, rtx4080: 250, rtx4090: 320 }
+    }
+  },
+  valorant: {
+    name: 'Valorant',
+    settings: 'High',
+    benchmarks: {
+      '1080p': { rtx4060: 350, rtx4070: 450, rtx4080: 500, rtx4090: 500 },
+      '1440p': { rtx4060: 280, rtx4070: 380, rtx4080: 480, rtx4090: 500 },
+      '4k': { rtx4060: 180, rtx4070: 260, rtx4080: 350, rtx4090: 450 }
+    }
+  },
+  tlou: {
+    name: 'The Last of Us Part I',
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 55, rtx4070: 82, rtx4080: 115, rtx4090: 148 },
+      '1440p': { rtx4060: 38, rtx4070: 60, rtx4080: 88, rtx4090: 118 },
+      '4k': { rtx4060: 22, rtx4070: 35, rtx4080: 55, rtx4090: 75 }
+    }
+  },
+  spiderman: {
+    name: 'Spider-Man Remastered',
+    settings: 'Ultra',
+    benchmarks: {
+      '1080p': { rtx4060: 85, rtx4070: 125, rtx4080: 165, rtx4090: 205 },
+      '1440p': { rtx4060: 60, rtx4070: 92, rtx4080: 128, rtx4090: 165 },
+      '4k': { rtx4060: 35, rtx4070: 55, rtx4080: 80, rtx4090: 108 }
+    }
+  }
+};
+
+const gpuNames = {
+  rtx4060: 'RTX 4060',
+  rtx4070: 'RTX 4070',
+  rtx4080: 'RTX 4080',
+  rtx4090: 'RTX 4090'
+};
+
+const budgetBuilds = {
+  entry: {
+    budget: '800-1200€',
+    cpu: 'Ryzen 5 7600X',
+    gpu: 'RTX 4060',
+    ram: '16GB DDR5',
+    storage: '1TB NVMe SSD',
+    motherboard: 'B650 Mainboard',
+    psu: '650W 80+ Gold',
+    expectedFps: {
+      '1080p': '60-120 FPS',
+      '1440p': '45-75 FPS'
+    }
+  },
+  mid: {
+    budget: '1200-2000€',
+    cpu: 'Ryzen 7 7800X3D',
+    gpu: 'RTX 4070 Ti',
+    ram: '32GB DDR5',
+    storage: '2TB NVMe SSD',
+    motherboard: 'X670 Mainboard',
+    psu: '750W 80+ Gold',
+    expectedFps: {
+      '1080p': '120-240+ FPS',
+      '1440p': '90-165 FPS',
+      '4k': '60-90 FPS'
+    }
+  },
+  high: {
+    budget: '2000-3500€',
+    cpu: 'Ryzen 9 7900X',
+    gpu: 'RTX 4080 Super',
+    ram: '64GB DDR5',
+    storage: '2TB NVMe Gen4 SSD',
+    motherboard: 'X670E Mainboard',
+    psu: '850W 80+ Platinum',
+    expectedFps: {
+      '1080p': '240+ FPS',
+      '1440p': '165-240 FPS',
+      '4k': '90-144 FPS'
+    }
+  },
+  enthusiast: {
+    budget: '3500€+',
+    cpu: 'i9-14900K / Ryzen 9 7950X',
+    gpu: 'RTX 4090',
+    ram: '128GB DDR5',
+    storage: '4TB NVMe Gen4 SSD',
+    motherboard: 'Z790 / X670E Mainboard',
+    psu: '1000W 80+ Platinum',
+    expectedFps: {
+      '1080p': '300+ FPS',
+      '1440p': '240+ FPS',
+      '4k': '144-165+ FPS'
+    }
+  }
+};
+
+const pcComponents = {
+  amd_cpus: [
+    { name: "Ryzen 5 7600X", socket: "AM5", generation: "Ryzen 7000", cores: 6, threads: 12, clock: "4.7-5.3 GHz", tdp: 105, price: 249, ram_support: "DDR5" },
+    { name: "Ryzen 7 7700X", socket: "AM5", generation: "Ryzen 7000", cores: 8, threads: 16, clock: "4.5-5.4 GHz", tdp: 105, price: 329, ram_support: "DDR5" },
+    { name: "Ryzen 7 7800X3D", socket: "AM5", generation: "Ryzen 7000", cores: 8, threads: 16, clock: "4.2-5.0 GHz", tdp: 120, price: 399, ram_support: "DDR5", badge: "Gaming" },
+    { name: "Ryzen 9 7900X", socket: "AM5", generation: "Ryzen 7000", cores: 12, threads: 24, clock: "4.7-5.4 GHz", tdp: 170, price: 499, ram_support: "DDR5" },
+    { name: "Ryzen 9 7950X", socket: "AM5", generation: "Ryzen 7000", cores: 16, threads: 32, clock: "4.5-5.7 GHz", tdp: 170, price: 599, ram_support: "DDR5" },
+    { name: "Ryzen 5 5600X", socket: "AM4", generation: "Ryzen 5000", cores: 6, threads: 12, clock: "3.7-4.6 GHz", tdp: 65, price: 149, ram_support: "DDR4" },
+    { name: "Ryzen 7 5800X3D", socket: "AM4", generation: "Ryzen 5000", cores: 8, threads: 16, clock: "3.4-4.5 GHz", tdp: 105, price: 349, ram_support: "DDR4", badge: "Gaming" }
+  ],
+  intel_cpus: [
+    { name: "Core i5-14400F", socket: "LGA1700", generation: "14th Gen", cores: 10, threads: 16, clock: "2.5-4.7 GHz", tdp: 65, price: 199, ram_support: "DDR4/DDR5" },
+    { name: "Core i5-14600K", socket: "LGA1700", generation: "14th Gen", cores: 14, threads: 20, clock: "3.5-5.3 GHz", tdp: 125, price: 299, ram_support: "DDR4/DDR5" },
+    { name: "Core i7-14700K", socket: "LGA1700", generation: "14th Gen", cores: 20, threads: 28, clock: "3.4-5.6 GHz", tdp: 125, price: 419, ram_support: "DDR4/DDR5" },
+    { name: "Core i9-14900K", socket: "LGA1700", generation: "14th Gen", cores: 24, threads: 32, clock: "3.2-6.0 GHz", tdp: 125, price: 589, ram_support: "DDR4/DDR5" }
+  ],
+  motherboards: {
+    AM5: [
+      { name: "ASRock B650M Pro RS", chipset: "B650M", socket: "AM5", ram_type: "DDR5", form: "mATX", price: 149 },
+      { name: "MSI B650 Gaming Plus WiFi", chipset: "B650", socket: "AM5", ram_type: "DDR5", form: "ATX", price: 189 },
+      { name: "ASUS TUF Gaming B650-Plus", chipset: "B650", socket: "AM5", ram_type: "DDR5", form: "ATX", price: 209 },
+      { name: "Gigabyte X670 Gaming X", chipset: "X670", socket: "AM5", ram_type: "DDR5", form: "ATX", price: 279 },
+      { name: "ASUS ROG Strix X670E-E", chipset: "X670E", socket: "AM5", ram_type: "DDR5", form: "ATX", price: 449 }
+    ],
+    AM4: [
+      { name: "MSI B550M Pro-VDH WiFi", chipset: "B550M", socket: "AM4", ram_type: "DDR4", form: "mATX", price: 119 },
+      { name: "ASUS TUF Gaming B550-Plus", chipset: "B550", socket: "AM4", ram_type: "DDR4", form: "ATX", price: 139 },
+      { name: "Gigabyte X570 Aorus Elite", chipset: "X570", socket: "AM4", ram_type: "DDR4", form: "ATX", price: 199 }
+    ],
+    LGA1700: [
+      { name: "MSI Pro B660M-A", chipset: "B660M", socket: "LGA1700", ram_type: "DDR4", form: "mATX", price: 129 },
+      { name: "ASUS Prime Z690-P", chipset: "Z690", socket: "LGA1700", ram_type: "DDR5", form: "ATX", price: 219 },
+      { name: "Gigabyte Z690 Gaming X", chipset: "Z690", socket: "LGA1700", ram_type: "DDR5", form: "ATX", price: 249 },
+      { name: "MSI MAG Z790 Tomahawk", chipset: "Z790", socket: "LGA1700", ram_type: "DDR5", form: "ATX", price: 289 }
+    ]
+  },
+  ram: [
+    { name: "16GB (2x8GB) DDR4-3200", generation: "DDR4", speed: "3200 MHz", capacity: "16GB", price: 45 },
+    { name: "32GB (2x16GB) DDR4-3600", generation: "DDR4", speed: "3600 MHz", capacity: "32GB", price: 85 },
+    { name: "64GB (2x32GB) DDR4-3600", generation: "DDR4", speed: "3600 MHz", capacity: "64GB", price: 165 },
+    { name: "16GB (2x8GB) DDR5-5200", generation: "DDR5", speed: "5200 MHz", capacity: "16GB", price: 60 },
+    { name: "32GB (2x16GB) DDR5-5600", generation: "DDR5", speed: "5600 MHz", capacity: "32GB", price: 110 },
+    { name: "32GB (2x16GB) DDR5-6000", generation: "DDR5", speed: "6000 MHz", capacity: "32GB", price: 125 },
+    { name: "64GB (2x32GB) DDR5-6000", generation: "DDR5", speed: "6000 MHz", capacity: "64GB", price: 235 }
+  ],
+  gpus: [
+    { name: "RTX 4060", vram: "8GB", power_consumption: 115, tier: "1080p", price: 299 },
+    { name: "RTX 4060 Ti 8GB", vram: "8GB", power_consumption: 160, tier: "1080p+", price: 399 },
+    { name: "RTX 4070", vram: "12GB", power_consumption: 200, tier: "1440p", price: 549 },
+    { name: "RTX 4070 Super", vram: "12GB", power_consumption: 220, tier: "1440p", price: 599 },
+    { name: "RTX 4070 Ti", vram: "12GB", power_consumption: 285, tier: "1440p+", price: 749 },
+    { name: "RTX 4080", vram: "16GB", power_consumption: 320, tier: "4K", price: 1099 },
+    { name: "RTX 4080 Super", vram: "16GB", power_consumption: 320, tier: "4K", price: 999 },
+    { name: "RTX 4090", vram: "24GB", power_consumption: 450, tier: "4K Ultra", price: 1799 },
+    { name: "RX 7600", vram: "8GB", power_consumption: 165, tier: "1080p", price: 269 },
+    { name: "RX 7700 XT", vram: "12GB", power_consumption: 245, tier: "1440p", price: 449 },
+    { name: "RX 7800 XT", vram: "16GB", power_consumption: 263, tier: "1440p", price: 499 },
+    { name: "RX 7900 XT", vram: "20GB", power_consumption: 315, tier: "4K", price: 749 },
+    { name: "RX 7900 XTX", vram: "24GB", power_consumption: 355, tier: "4K", price: 999 }
+  ],
+  storage: [
+    { name: "500GB NVMe Gen3 (Kingston NV2)", interface: "NVMe Gen3", capacity: "500GB", price: 45 },
+    { name: "1TB NVMe Gen3 (WD Blue SN570)", interface: "NVMe Gen3", capacity: "1TB", price: 70 },
+    { name: "1TB NVMe Gen4 (Samsung 980 Pro)", interface: "NVMe Gen4", capacity: "1TB", price: 99 },
+    { name: "2TB NVMe Gen4 (Samsung 990 Pro)", interface: "NVMe Gen4", capacity: "2TB", price: 179 },
+    { name: "2TB NVMe Gen4 (WD Black SN850X)", interface: "NVMe Gen4", capacity: "2TB", price: 169 },
+    { name: "4TB NVMe Gen4 (Crucial P3 Plus)", interface: "NVMe Gen4", capacity: "4TB", price: 299 }
+  ],
+  psus: [
+    { name: "550W 80+ Bronze (be quiet! System Power)", wattage: 550, efficiency: "80+ Bronze", price: 59 },
+    { name: "650W 80+ Gold (Corsair RM650)", wattage: 650, efficiency: "80+ Gold", price: 89 },
+    { name: "750W 80+ Gold (be quiet! Straight Power 11)", wattage: 750, efficiency: "80+ Gold", price: 119 },
+    { name: "850W 80+ Gold (Corsair RM850x)", wattage: 850, efficiency: "80+ Gold", price: 139 },
+    { name: "1000W 80+ Platinum (ASUS ROG Thor)", wattage: 1000, efficiency: "80+ Platinum", price: 199 },
+    { name: "1200W 80+ Platinum (Corsair HX1200)", wattage: 1200, efficiency: "80+ Platinum", price: 249 }
+  ]
+};
+
+
+
+function hideElement(el) {
+  if (el) {
+    el.style.display = 'none';
+    el.style.visibility = 'hidden';
+    el.style.height = '0';
+    el.style.overflow = 'hidden';
+    el.style.margin = '0';
+    el.style.padding = '0';
+    el.setAttribute('hidden', '');
+  }
+}
+
+function showElement(el) {
+  if (el) {
+    el.style.display = 'block';
+    el.style.visibility = 'visible';
+    el.style.height = '';
+    el.style.overflow = '';
+    el.style.margin = '';
+    el.style.padding = '';
+    el.removeAttribute('hidden');
+  }
+}
+
+function getSelector(name) {
+  return document.querySelector(`[data-selector="${name}"]`) ||
+         document.getElementById(`selector-${name}`) ||
+         document.querySelector(`.selector-${name}`);
+}
+
+window.currentRatgeberMode = null;
+
+function selectMode(mode) {
+  console.log('selectMode called with:', mode);
+  window.currentRatgeberMode = mode;
+  
+  const modeSelection = document.querySelector('.ratgeber-mode-selection');
+  if (modeSelection) {
+    modeSelection.style.display = 'none';
+  }
+  
+  if (mode === 'custom') {
+    // Show breadcrumb even for custom mode
+    const breadcrumb = document.querySelector('.ratgeber-breadcrumb');
+    if (breadcrumb) {
+      breadcrumb.style.display = 'flex';
+      const modeName = breadcrumb.querySelector('.mode-name');
+      if (modeName) {
+        modeName.textContent = 'Komponenten selbst wählen';
+      }
+    }
+    
+    const konfigurator = document.getElementById('pc-konfigurator');
+    if (konfigurator) {
+      konfigurator.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Keep ratgeber visible - just scroll away, don't hide
+    return;
+  }
+  
+  const breadcrumb = document.querySelector('.ratgeber-breadcrumb');
+  if (breadcrumb) {
+    breadcrumb.style.display = 'flex';
+    const modeName = breadcrumb.querySelector('.mode-name');
+    if (modeName) {
+      modeName.textContent = mode === 'budget' ? 'Budget vorgeben' : 'FPS-Ziel & Auflösung';
+    }
+  }
+  
+  const usecase = document.querySelector('[data-selector="usecase"]');
+  const budget = document.querySelector('[data-selector="budget"]');
+  const fps = document.querySelector('[data-selector="fps"]');
+  const resolution = document.querySelector('[data-selector="resolution"]');
+  
+  if (mode === 'budget') {
+    if (usecase) usecase.style.display = 'block';
+    if (budget) budget.style.display = 'block';
+    if (fps) fps.style.display = 'none';
+    if (resolution) resolution.style.display = 'none';
+    console.log('Budget mode: showing usecase + budget');
+  }
+  else if (mode === 'performance') {
+    if (usecase) usecase.style.display = 'none';
+    if (budget) budget.style.display = 'none';
+    if (resolution) resolution.style.display = 'block'; // Show first
+    if (fps) fps.style.display = 'block'; // Show second
+    console.log('Performance mode: showing resolution + fps');
+  }
+}
+
+function toggleSelector(header) {
+  const section = header.closest('.selector-section');
+  const content = section.querySelector('.selector-content');
+  const isExpanded = content.classList.contains('expanded');
+  
+  if (isExpanded) {
+    content.classList.remove('expanded');
+    section.classList.remove('active');
+  } else {
+    content.classList.add('expanded');
+    section.classList.add('active');
+  }
+}
+
+function selectOption(element, type, value) {
+  // Update selected preview text
+  const section = element.closest('.selector-section');
+  const preview = section.querySelector('.selected-preview');
+  if (preview) {
+    preview.textContent = value;
+    preview.style.color = 'var(--color-primary)';
+    preview.style.fontWeight = 'var(--font-weight-semibold)';
+  }
+  
+  // Mark as selected
+  section.querySelectorAll('.option-card').forEach(card => {
+    card.classList.remove('selected');
+  });
+  element.classList.add('selected');
+  
+  // DON'T close accordion - keep it open (persistent)
+  // Scroll to next selector
+  const currentMode = window.currentRatgeberMode;
+  const allSelectors = currentMode === 'budget' 
+    ? ['usecase', 'budget']
+    : ['resolution', 'fps']; // Swapped order for performance mode
+  
+  const currentIndex = allSelectors.indexOf(type);
+  if (currentIndex >= 0 && currentIndex < allSelectors.length - 1) {
+    const nextType = allSelectors[currentIndex + 1];
+    const nextSection = document.querySelector(`[data-selector="${nextType}"]`);
+    if (nextSection && nextSection.style.display !== 'none') {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Auto-open next accordion
+      setTimeout(() => {
+        const nextHeader = nextSection.querySelector('.selector-header');
+        const nextContent = nextSection.querySelector('.selector-content');
+        if (nextContent && !nextContent.classList.contains('expanded')) {
+          toggleSelector(nextHeader);
+        }
+      }, 400);
+    }
+  }
+  
+  console.log('Selected:', type, value);
+}
+
+function resetRatgeber() {
+  const modeSelection = document.querySelector('.ratgeber-mode-selection');
+  if (modeSelection) {
+    modeSelection.style.display = 'grid';
+  }
+  
+  const breadcrumb = document.querySelector('.ratgeber-breadcrumb');
+  if (breadcrumb) {
+    breadcrumb.style.display = 'none';
+  }
+  
+  document.querySelectorAll('[data-selector]').forEach(el => {
+    el.style.display = 'none';
+  });
+  
+  document.getElementById('pc-ratgeber').scrollIntoView({ behavior: 'smooth' });
+}
+
+
+
+
+
+function updateBuildRecommendation() {
+  const { budget, usecase } = appState.currentSelection;
+
+  if (!budget) {
+    document.getElementById('build-result').classList.add('hidden');
+    return;
+  }
+
+  const build = budgetBuilds[budget];
+  const buildResult = document.getElementById('build-result');
+  
+  const useCaseLabels = {
+    gaming: 'Gaming',
+    workstation: 'Workstation',
+    editing: 'Video Editing',
+    allround: 'Allround',
+    streaming: 'Streaming'
+  };
+  
+  const useCaseLabel = usecase ? ` - ${useCaseLabels[usecase]}` : '';
+
+  let html = `
+    <div class="build-recommendation">
+      <h3>Empfohlene Konfiguration - ${build.budget}${useCaseLabel}</h3>
+      <div class="component-list">
+        <div class="component-item">
+          <span class="component-label">Prozessor (CPU)</span>
+          <span class="component-value">${build.cpu}</span>
+        </div>
+        <div class="component-item">
+          <span class="component-label">Grafikkarte (GPU)</span>
+          <span class="component-value">${build.gpu}</span>
+        </div>
+        <div class="component-item">
+          <span class="component-label">Arbeitsspeicher (RAM)</span>
+          <span class="component-value">${build.ram}</span>
+        </div>
+        <div class="component-item">
+          <span class="component-label">Speicher</span>
+          <span class="component-value">${build.storage}</span>
+        </div>
+        <div class="component-item">
+          <span class="component-label">Mainboard</span>
+          <span class="component-value">${build.motherboard}</span>
+        </div>
+        <div class="component-item">
+          <span class="component-label">Netzteil</span>
+          <span class="component-value">${build.psu}</span>
+        </div>
+      </div>
+      <div class="fps-expectations">
+        <h4>Erwartete Performance</h4>
+        <div class="fps-list">
+  `;
+
+  Object.entries(build.expectedFps).forEach(([res, fps]) => {
+    const resolutionLabels = {
+      '1080p': '1920x1080 (1080p)',
+      '1440p': '2560x1440 (1440p)',
+      '4k': '3840x2160 (4K)'
+    };
+    html += `
+      <div class="fps-item">
+        <span>${resolutionLabels[res]}</span>
+        <span>${fps}</span>
+      </div>
+    `;
+  });
+
+  html += `
+        </div>
+      </div>
+    </div>
+  `;
+
+  buildResult.innerHTML = html;
+  buildResult.classList.remove('hidden');
+}
+
+function updateGameBenchmark() {
+  const { selectedGame, gameResolution, gameTargetFps } = appState.currentSelection;
+
+  if (!selectedGame) {
+    document.getElementById('benchmark-result').classList.add('hidden');
+    return;
+  }
+
+  const game = gameBenchmarks[selectedGame];
+  const benchmarks = game.benchmarks[gameResolution];
+  const benchmarkResult = document.getElementById('benchmark-result');
+
+  let html = `
+    <div class="benchmark-display">
+      <h4>${game.name} - ${game.settings} Settings @ ${gameResolution.toUpperCase()}</h4>
+      <div class="gpu-benchmarks">
+  `;
+
+  Object.entries(benchmarks).forEach(([gpu, fps]) => {
+    const meetsTarget = fps >= gameTargetFps;
+    const badge = meetsTarget ? '<div class="recommendation-badge">Empfohlen</div>' : '';
+
+    html += `
+      <div class="gpu-benchmark">
+        <div class="gpu-name">${gpuNames[gpu]}</div>
+        <div class="fps-value">${fps}</div>
+        <div class="fps-label">FPS</div>
+        ${badge}
+      </div>
+    `;
+  });
+
+  html += `
+      </div>
+    </div>
+  `;
+
+  benchmarkResult.innerHTML = html;
+  benchmarkResult.classList.remove('hidden');
+}
+
+function setupGameWidget() {
+  const gameCards = document.querySelectorAll('.game-card');
+
+  gameCards.forEach(card => {
+    card.addEventListener('click', function() {
+      gameCards.forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+      appState.currentSelection.selectedGame = this.dataset.game;
+      updateGameBenchmark();
+    });
+  });
+}
+
+function toggleWidgetSelector(header) {
+  const selector = header.closest('.widget-selector');
+  const menu = selector.querySelector('.widget-selector-menu');
+  const isExpanded = menu.classList.contains('expanded');
+  
+  // Close all other widget selectors
+  document.querySelectorAll('.widget-selector-menu.expanded').forEach(m => {
+    if (m !== menu) {
+      m.classList.remove('expanded');
+      m.closest('.widget-selector').classList.remove('active');
+    }
+  });
+  
+  if (isExpanded) {
+    menu.classList.remove('expanded');
+    selector.classList.remove('active');
+  } else {
+    menu.classList.add('expanded');
+    selector.classList.add('active');
+  }
+}
+
+function selectWidgetOption(element, type, value) {
+  const selector = element.closest('.widget-selector');
+  const selected = selector.querySelector('.widget-selected');
+  if (selected) {
+    selected.textContent = type === 'fps' ? value + ' FPS' : value;
+  }
+  
+  // Mark as selected
+  selector.querySelectorAll('.widget-option').forEach(opt => {
+    opt.classList.remove('selected');
+  });
+  element.classList.add('selected');
+  
+  // Close menu
+  const menu = selector.querySelector('.widget-selector-menu');
+  menu.classList.remove('expanded');
+  selector.classList.remove('active');
+  
+  // Update state and benchmark
+  if (type === 'resolution') {
+    appState.currentSelection.gameResolution = value;
+  } else if (type === 'fps') {
+    appState.currentSelection.gameTargetFps = parseInt(value);
+  }
+  updateGameBenchmark();
+}
+
+function initConfigurator() {
+  updateProgress(1);
+  document.querySelectorAll('.config-step').forEach((step, index) => {
+    if (index === 0) {
+      step.classList.remove('hidden');
+    } else {
+      step.classList.add('hidden');
+    }
+  });
+
+  const platformCards = document.querySelectorAll('.platform-card');
+  platformCards.forEach(card => {
+    card.addEventListener('click', function() {
+      selectPlatform(this.dataset.platform);
+    });
+  });
+  
+  updateConfigNav();
+}
+
+function selectPlatform(platform) {
+  appState.configHistory.push({
+    step: 1,
+    type: 'platform',
+    value: platform,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.platform = platform;
+
+  document.querySelectorAll('.platform-card').forEach(card => {
+    card.classList.remove('selected');
+  });
+  document.querySelector(`[data-platform="${platform}"]`).classList.add('selected');
+
+  setTimeout(() => {
+    showCPUSelection(platform);
+    updateProgress(2);
+    updateConfigNav();
+  }, 400);
+}
+
+function showCPUSelection(platform) {
+  const cpus = platform === 'amd' ? pcComponents.amd_cpus : pcComponents.intel_cpus;
+  const cpuGrid = document.getElementById('cpu-grid');
+  
+  let html = '';
+  cpus.forEach((cpu, index) => {
+    const logo = cpu.name.includes('Ryzen') ? manufacturerLogos.amd : manufacturerLogos.intel;
+    const badgeHtml = cpu.badge ? '<div class="component-badge">' + cpu.badge + '</div>' : '';
+    const cpuJson = JSON.stringify(cpu).replace(/'/g, '&apos;');
+    html += '<div class="option-card" data-cpu="' + cpuJson + '" style="animation-delay: ' + (index * 0.05) + 's">' +
+      '<div class="manufacturer-badge"><img src="' + logo + '" alt="Manufacturer" class="brand-logo"></div>' +
+      '<div class="component-name">' + cpu.name + '</div>' +
+      '<div class="component-specs">' +
+      '<div class="component-spec">' + cpu.cores + 'C/' + cpu.threads + 'T</div>' +
+      '<div class="component-spec">' + cpu.clock + '</div>' +
+      '<div class="component-spec">TDP: ' + cpu.tdp + 'W</div>' +
+      '</div>' + badgeHtml +
+      '<div class="component-price">' + cpu.price + '€</div>' +
+      '<span class="checkmark hidden">✓</span>' +
+      '</div>';
+  });
+  cpuGrid.innerHTML = html;
+
+  cpuGrid.innerHTML = cpus.map((cpu, index) => {
+    const logo = cpu.name.includes('Ryzen') ? manufacturerLogos.amd : manufacturerLogos.intel;
+    return `
+    <div class="option-card" data-cpu='${JSON.stringify(cpu)}' style="animation-delay: ${index * 0.05}s">
+      <img class="manufacturer-logo" src="${logo}" alt="${cpu.name.includes('Ryzen') ? 'AMD' : 'Intel'}">
+      <div class="component-name">${cpu.name}</div>
+      <div class="component-specs">
+        <div class="component-spec">${cpu.cores}C/${cpu.threads}T</div>
+        <div class="component-spec">${cpu.clock}</div>
+        <div class="component-spec">TDP: ${cpu.tdp}W</div>
+      </div>
+      ${cpu.badge ? `<div class="component-badge">${cpu.badge}</div>` : ''}
+      <div class="component-price">${cpu.price}€</div>
+      <span class="checkmark hidden">✓</span>
+    </div>
+  `;
+  }).join('');
+
+  cpuGrid.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const cpuData = this.dataset.cpu.replace(/&apos;/g, "'");
+      const cpu = JSON.parse(cpuData);
+      selectCPU(cpu, this);
+    });
+  });
+
+  showStep(2);
+}
+
+function selectCPU(cpu, element) {
+  appState.configHistory.push({
+    step: 2,
+    type: 'cpu',
+    value: cpu,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.cpu = cpu;
+
+  document.querySelectorAll('#cpu-grid .option-card').forEach(card => {
+    card.classList.remove('selected');
+    card.querySelector('.checkmark').classList.add('hidden');
+  });
+  element.classList.add('selected');
+  element.querySelector('.checkmark').classList.remove('hidden');
+
+  setTimeout(() => {
+    showMotherboardSelection(cpu.socket);
+    updateProgress(3);
+    updateSummary();
+    updateConfigNav();
+  }, 400);
+}
+
+function showMotherboardSelection(socket) {
+  const motherboards = pcComponents.motherboards[socket] || [];
+  const motherboardGrid = document.getElementById('motherboard-grid');
+
+  if (motherboards.length === 0) {
+    motherboardGrid.innerHTML = '<div class="summary-empty">Keine kompatiblen Mainboards gefunden</div>';
+    return;
+  }
+  
+  motherboardGrid.innerHTML = motherboards.map((mb, index) => {
+    const brandLogos = {
+      'ASRock': manufacturerLogos.asrock,
+      'MSI': manufacturerLogos.msi,
+      'ASUS': manufacturerLogos.asus,
+      'Gigabyte': manufacturerLogos.gigabyte
+    };
+    const brand = mb.name.split(' ')[0];
+    const logo = brandLogos[brand];
+    return `
+    <div class="option-card" data-motherboard='${JSON.stringify(mb)}' style="animation-delay: ${index * 0.05}s">
+      <img class="manufacturer-logo" src="${logo}" alt="${brand}">
+      <div class="component-name">${mb.name}</div>
+      <div class="component-specs">
+        <div class="component-spec">${mb.chipset} | ${mb.form}</div>
+        <div class="component-spec">${mb.ram_type}</div>
+      </div>
+      <div class="component-price">${mb.price}€</div>
+      <span class="checkmark hidden">✓</span>
+    </div>
+  `;
+  }).join('');
+
+  motherboardGrid.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const mbData = this.dataset.motherboard.replace(/&apos;/g, "'");
+      const mb = JSON.parse(mbData);
+      selectMotherboard(mb, this);
+    });
+  });
+
+  showStep(3);
+}
+
+function selectMotherboard(motherboard, element) {
+  appState.configHistory.push({
+    step: 3,
+    type: 'motherboard',
+    value: motherboard,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.motherboard = motherboard;
+
+  document.querySelectorAll('#motherboard-grid .option-card').forEach(card => {
+    card.classList.remove('selected');
+    card.querySelector('.checkmark').classList.add('hidden');
+  });
+  element.classList.add('selected');
+  element.querySelector('.checkmark').classList.remove('hidden');
+
+  setTimeout(() => {
+    showRAMSelection(motherboard.ram_type);
+    updateProgress(4);
+    updateSummary();
+    updateConfigNav();
+  }, 400);
+}
+
+function showRAMSelection(ramType) {
+  const compatibleRAM = pcComponents.ram.filter(ram => ram.generation === ramType);
+  const ramGrid = document.getElementById('ram-grid');
+
+  ramGrid.innerHTML = compatibleRAM.map((ram, index) => {
+    const logo = manufacturerLogos.corsair;
+    return `
+    <div class="option-card" data-ram='${JSON.stringify(ram)}' style="animation-delay: ${index * 0.05}s">
+      <img class="manufacturer-logo" src="${logo}" alt="Corsair">
+      <div class="component-name">${ram.name}</div>
+      <div class="component-specs">
+        <div class="component-spec">${ram.generation} @ ${ram.speed}</div>
+      </div>
+      <div class="component-price">${ram.price}€</div>
+      <span class="checkmark hidden">✓</span>
+    </div>
+  `;
+  }).join('');
+
+  ramGrid.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const ramData = this.dataset.ram.replace(/&apos;/g, "'");
+      const ram = JSON.parse(ramData);
+      selectRAM(ram, this);
+    });
+  });
+
+  showStep(4);
+}
+
+function selectRAM(ram, element) {
+  appState.configHistory.push({
+    step: 4,
+    type: 'ram',
+    value: ram,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.ram = ram;
+
+  document.querySelectorAll('#ram-grid .option-card').forEach(card => {
+    card.classList.remove('selected');
+    card.querySelector('.checkmark').classList.add('hidden');
+  });
+  element.classList.add('selected');
+  element.querySelector('.checkmark').classList.remove('hidden');
+
+  setTimeout(() => {
+    showGPUSelection();
+    updateProgress(5);
+    updateSummary();
+    updateConfigNav();
+  }, 400);
+}
+
+function showGPUSelection() {
+  const gpuGrid = document.getElementById('gpu-grid');
+
+  gpuGrid.innerHTML = pcComponents.gpus.map((gpu, index) => {
+    const logo = gpu.name.startsWith('RTX') ? manufacturerLogos.nvidia : manufacturerLogos.amd;
+    return `
+    <div class="option-card" data-gpu='${JSON.stringify(gpu)}' style="animation-delay: ${index * 0.05}s">
+      <img class="manufacturer-logo" src="${logo}" alt="${gpu.name.startsWith('RTX') ? 'NVIDIA' : 'AMD'}">
+      <div class="component-name">${gpu.name}</div>
+      <div class="component-specs">
+        <div class="component-spec">${gpu.vram} | ${gpu.power_consumption}W</div>
+        <div class="component-spec">${gpu.tier}</div>
+      </div>
+      <div class="component-price">${gpu.price}€</div>
+      <span class="checkmark hidden">✓</span>
+    </div>
+  `;
+  }).join('');
+
+  gpuGrid.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const gpuData = this.dataset.gpu.replace(/&apos;/g, "'");
+      const gpu = JSON.parse(gpuData);
+      selectGPU(gpu, this);
+    });
+  });
+
+  showStep(5);
+}
+
+function selectGPU(gpu, element) {
+  appState.configHistory.push({
+    step: 5,
+    type: 'gpu',
+    value: gpu,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.gpu = gpu;
+
+  document.querySelectorAll('#gpu-grid .option-card').forEach(card => {
+    card.classList.remove('selected');
+    card.querySelector('.checkmark').classList.add('hidden');
+  });
+  element.classList.add('selected');
+  element.querySelector('.checkmark').classList.remove('hidden');
+
+  setTimeout(() => {
+    showStorageSelection();
+    updateProgress(6);
+    updateSummary();
+    updateConfigNav();
+  }, 400);
+}
+
+function showStorageSelection() {
+  const storageGrid = document.getElementById('storage-grid');
+
+  storageGrid.innerHTML = pcComponents.storage.map((storage, index) => {
+    const storageBrands = {
+      'Samsung': manufacturerLogos.samsung,
+      'WD': manufacturerLogos.wd
+    };
+    const brandMatch = storage.name.match(/(Samsung|WD)/);
+    const brand = brandMatch ? brandMatch[1] : null;
+    const logo = brand ? storageBrands[brand] : null;
+    return `
+    <div class="option-card" data-storage='${JSON.stringify(storage)}' style="animation-delay: ${index * 0.05}s">
+      ${logo ? `<img class="manufacturer-logo" src="${logo}" alt="${brand}">` : ''}
+      <div class="component-name">${storage.name}</div>
+      <div class="component-specs">
+        <div class="component-spec">${storage.interface}</div>
+      </div>
+      <div class="component-price">${storage.price}€</div>
+      <span class="checkmark hidden">✓</span>
+    </div>
+  `;
+  }).join('');
+
+  storageGrid.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const storageData = this.dataset.storage.replace(/&apos;/g, "'");
+      const storage = JSON.parse(storageData);
+      selectStorage(storage, this);
+    });
+  });
+
+  showStep(6);
+}
+
+function selectStorage(storage, element) {
+  appState.configHistory.push({
+    step: 6,
+    type: 'storage',
+    value: storage,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.storage = storage;
+
+  document.querySelectorAll('#storage-grid .option-card').forEach(card => {
+    card.classList.remove('selected');
+    card.querySelector('.checkmark').classList.add('hidden');
+  });
+  element.classList.add('selected');
+  element.querySelector('.checkmark').classList.remove('hidden');
+
+  setTimeout(() => {
+    showPSUSelection();
+    updateProgress(7);
+    updateSummary();
+    updateConfigNav();
+  }, 400);
+}
+
+function showPSUSelection() {
+  const totalPower = calculateTotalPower();
+  const recommendedPower = Math.ceil(totalPower * 1.25);
+
+  const psuRecommendation = document.getElementById('psu-recommendation');
+  psuRecommendation.innerHTML = `
+    <h4>Empfohlene Leistung</h4>
+    <p>Gesamtverbrauch: <strong>${totalPower}W</strong></p>
+    <p>Empfohlen: <strong>Mindestens ${recommendedPower}W</strong> (mit 25% Puffer)</p>
+  `;
+
+  const psuGrid = document.getElementById('psu-grid');
+  psuGrid.innerHTML = pcComponents.psus.map((psu, index) => {
+    const isUnderpowered = psu.wattage < recommendedPower;
+    const psuBrands = {
+      'Corsair': manufacturerLogos.corsair,
+      'ASUS': manufacturerLogos.asus
+    };
+    const brandMatch = psu.name.match(/(Corsair|ASUS)/);
+    const brand = brandMatch ? brandMatch[1] : null;
+    const logo = brand ? psuBrands[brand] : null;
+    return `
+      <div class="option-card ${isUnderpowered ? 'disabled' : ''}" data-psu='${JSON.stringify(psu)}' style="animation-delay: ${index * 0.05}s">
+        ${logo ? `<img class="manufacturer-logo" src="${logo}" alt="${brand}">` : ''}
+        <div class="component-name">${psu.name}</div>
+        <div class="component-specs">
+          <div class="component-spec">${psu.wattage}W | ${psu.efficiency}</div>
+        </div>
+        ${isUnderpowered ? '<div class="component-badge warning-badge">⚠️ Zu schwach</div>' : ''}
+        <div class="component-price">${psu.price}€</div>
+        <span class="checkmark hidden">✓</span>
+      </div>
+    `;
+  }).join('');
+
+  psuGrid.querySelectorAll('.option-card:not(.disabled)').forEach(card => {
+    card.addEventListener('click', function() {
+      const psuData = this.dataset.psu.replace(/&apos;/g, "'");
+      const psu = JSON.parse(psuData);
+      selectPSU(psu, this);
+    });
+  });
+
+  showStep(7);
+}
+
+function selectPSU(psu, element) {
+  appState.configHistory.push({
+    step: 7,
+    type: 'psu',
+    value: psu,
+    state: JSON.parse(JSON.stringify(appState.configuratorState))
+  });
+  
+  appState.configuratorState.psu = psu;
+
+  document.querySelectorAll('#psu-grid .option-card').forEach(card => {
+    card.classList.remove('selected');
+    card.querySelector('.checkmark').classList.add('hidden');
+  });
+  element.classList.add('selected');
+  element.querySelector('.checkmark').classList.remove('hidden');
+
+  updateSummary();
+  updateConfigNav();
+  document.getElementById('complete-build').disabled = false;
+}
+
+function calculateTotalPower() {
+  let total = 0;
+  if (appState.configuratorState.cpu) total += appState.configuratorState.cpu.tdp;
+  if (appState.configuratorState.gpu) total += appState.configuratorState.gpu.power_consumption;
+  total += 50;
+  return total;
+}
+
+function showStep(stepNumber) {
+  document.querySelectorAll('.config-step').forEach(step => {
+    step.classList.add('hidden');
+  });
+  document.getElementById(`step-${stepNumber}`).classList.remove('hidden');
+  appState.configuratorState.currentStep = stepNumber;
+}
+
+function updateProgress(activeStep) {
+  document.querySelectorAll('.progress-step').forEach((step, index) => {
+    const stepNum = index + 1;
+    step.classList.remove('active', 'completed');
+
+    if (stepNum < activeStep) {
+      step.classList.add('completed');
+    } else if (stepNum === activeStep) {
+      step.classList.add('active');
+    }
+  });
+}
+
+function updateSummary() {
+  const summaryContent = document.getElementById('summary-content');
+  const { cpu, motherboard, ram, gpu, storage, psu } = appState.configuratorState;
+
+  if (!cpu && !motherboard && !ram && !gpu && !storage && !psu) {
+    summaryContent.innerHTML = '<div class="summary-empty">Wähle Komponenten aus, um deine Konfiguration zu sehen</div>';
+    document.getElementById('summary-total').classList.add('hidden');
+    return;
+  }
+
+  let html = '';
+  let totalPrice = 0;
+
+  if (cpu) {
+    html += `
+      <div class="summary-item">
+        <div class="summary-item-label">Prozessor</div>
+        <div class="summary-item-value">${cpu.name}</div>
+        <div class="summary-item-price">${cpu.price}€</div>
+      </div>
+    `;
+    totalPrice += cpu.price;
+  }
+
+  if (motherboard) {
+    html += `
+      <div class="summary-item">
+        <div class="summary-item-label">Mainboard</div>
+        <div class="summary-item-value">${motherboard.name}</div>
+        <div class="summary-item-price">${motherboard.price}€</div>
+      </div>
+    `;
+    totalPrice += motherboard.price;
+  }
+
+  if (ram) {
+    html += `
+      <div class="summary-item">
+        <div class="summary-item-label">Arbeitsspeicher</div>
+        <div class="summary-item-value">${ram.name}</div>
+        <div class="summary-item-price">${ram.price}€</div>
+      </div>
+    `;
+    totalPrice += ram.price;
+  }
+
+  if (gpu) {
+    html += `
+      <div class="summary-item">
+        <div class="summary-item-label">Grafikkarte</div>
+        <div class="summary-item-value">${gpu.name}</div>
+        <div class="summary-item-price">${gpu.price}€</div>
+      </div>
+    `;
+    totalPrice += gpu.price;
+  }
+
+  if (storage) {
+    html += `
+      <div class="summary-item">
+        <div class="summary-item-label">Speicher</div>
+        <div class="summary-item-value">${storage.name}</div>
+        <div class="summary-item-price">${storage.price}€</div>
+      </div>
+    `;
+    totalPrice += storage.price;
+  }
+
+  if (psu) {
+    html += `
+      <div class="summary-item">
+        <div class="summary-item-label">Netzteil</div>
+        <div class="summary-item-value">${psu.name}</div>
+        <div class="summary-item-price">${psu.price}€</div>
+      </div>
+    `;
+    totalPrice += psu.price;
+  }
+
+  summaryContent.innerHTML = html;
+  document.getElementById('total-price').textContent = `${totalPrice}€`;
+  document.getElementById('summary-total').classList.remove('hidden');
+
+  updateCompatibilityStatus();
+
+  if (cpu || gpu) {
+    const powerConsumption = document.getElementById('power-consumption');
+    const totalPower = calculateTotalPower();
+    powerConsumption.innerHTML = `
+      <div class="power-info">
+        <div class="power-info-label">Stromverbrauch:</div>
+        <div class="power-info-value">~${totalPower}W</div>
+      </div>
+    `;
+    powerConsumption.classList.remove('hidden');
+  }
+}
+
+function updateCompatibilityStatus() {
+  const statusDiv = document.getElementById('compatibility-status');
+  const { cpu, motherboard, ram, psu } = appState.configuratorState;
+
+  if (!cpu || !motherboard) {
+    statusDiv.classList.add('hidden');
+    return;
+  }
+
+  let warnings = [];
+  let errors = [];
+
+  if (ram && motherboard) {
+    if (ram.generation !== motherboard.ram_type) {
+      errors.push(`⚠️ FEHLER: ${ram.generation} RAM ist nicht kompatibel mit ${motherboard.ram_type} Mainboard`);
+    }
+  }
+
+  if (psu) {
+    const totalPower = calculateTotalPower();
+    const recommendedPower = Math.ceil(totalPower * 1.25);
+    if (psu.wattage < recommendedPower) {
+      warnings.push(`⚠️ WARNUNG: Netzteil könnte zu schwach sein (${psu.wattage}W vs empfohlen ${recommendedPower}W)`);
+    }
+  }
+
+  if (errors.length > 0) {
+    statusDiv.innerHTML = errors.map(err => `
+      <div class="compatibility-status error">${err}</div>
+    `).join('');
+    statusDiv.classList.remove('hidden');
+  } else if (warnings.length > 0) {
+    statusDiv.innerHTML = warnings.map(warn => `
+      <div class="compatibility-status warning">${warn}</div>
+    `).join('');
+    statusDiv.classList.remove('hidden');
+  } else if (cpu && motherboard && ram && psu) {
+    statusDiv.innerHTML = '<div class="compatibility-status success">✓ Alle Komponenten sind kompatibel!</div>';
+    statusDiv.classList.remove('hidden');
+  } else {
+    statusDiv.classList.add('hidden');
+  }
+}
+
+function completeBuild() {
+  const { cpu, motherboard, ram, gpu, storage, psu } = appState.configuratorState;
+
+  if (!cpu || !motherboard || !ram || !gpu || !storage || !psu) {
+    alert('Bitte wähle alle Komponenten aus!');
+    return;
+  }
+
+  const totalPrice = cpu.price + motherboard.price + ram.price + gpu.price + storage.price + psu.price;
+
+  alert(`Konfiguration abgeschlossen!\n\nDeine Konfiguration:\n- ${cpu.name}\n- ${motherboard.name}\n- ${ram.name}\n- ${gpu.name}\n- ${storage.name}\n- ${psu.name}\n\nGesamtpreis: ${totalPrice}€\n\nKontaktiere uns für ein detailliertes Angebot!`);
+}
+
+function setupSmoothScroll() {
+  const navLinks = document.querySelectorAll('.nav-links a, .cta-button[href^="#"]');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+}
+
+function setupForm() {
+  const form = document.getElementById('appointment-form');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      message: document.getElementById('message').value
+    };
+
+    alert('Vielen Dank für deine Anfrage! Wir melden uns bald bei dir.');
+    form.reset();
+  });
+}
+
+function setupCompleteBuildButton() {
+  const button = document.getElementById('complete-build');
+  if (button) {
+    button.addEventListener('click', completeBuild);
+  }
+}
+
+function goBackStep() {
+  if (appState.configHistory.length === 0) return;
+  
+  const lastEntry = appState.configHistory.pop();
+  const prevStep = lastEntry.step;
+  
+  appState.configuratorState = JSON.parse(JSON.stringify(lastEntry.state));
+  
+  appState.configuratorState[lastEntry.type] = null;
+  
+  showStep(prevStep);
+  updateProgress(prevStep);
+  updateSummary();
+  updateConfigNav();
+  
+  const stepElement = document.getElementById(`step-${prevStep}`);
+  if (stepElement) {
+    stepElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  
+  document.getElementById('complete-build').disabled = true;
+}
+
+function updateConfigNav() {
+  const navBar = document.getElementById('config-nav-bar');
+  const currentStep = appState.configuratorState.currentStep;
+  
+  if (currentStep > 1) {
+    navBar.style.display = 'flex';
+  } else {
+    navBar.style.display = 'none';
+  }
+  
+  const backBtn = document.getElementById('nav-back-btn');
+  if (backBtn) {
+    backBtn.disabled = appState.configHistory.length === 0;
+  }
+  
+  const navSteps = document.querySelectorAll('.nav-step');
+  navSteps.forEach((step, index) => {
+    const stepNum = index + 1;
+    step.classList.remove('active', 'completed');
+    
+    if (stepNum < currentStep) {
+      step.classList.add('completed');
+      step.style.cursor = 'pointer';
+      step.onclick = () => jumpToStep(stepNum);
+    } else if (stepNum === currentStep) {
+      step.classList.add('active');
+      step.style.cursor = 'default';
+      step.onclick = null;
+    } else {
+      step.style.cursor = 'default';
+      step.onclick = null;
+    }
+  });
+}
+
+function jumpToStep(targetStep) {
+  while (appState.configHistory.length > 0) {
+    const lastEntry = appState.configHistory[appState.configHistory.length - 1];
+    if (lastEntry.step < targetStep) break;
+    appState.configHistory.pop();
+  }
+  
+  if (appState.configHistory.length > 0) {
+    const targetEntry = appState.configHistory[appState.configHistory.length - 1];
+    appState.configuratorState = JSON.parse(JSON.stringify(targetEntry.state));
+  } else {
+    appState.configuratorState = {
+      platform: null,
+      cpu: null,
+      motherboard: null,
+      ram: null,
+      gpu: null,
+      storage: null,
+      psu: null,
+      currentStep: 1
+    };
+  }
+  
+  showStep(targetStep);
+  updateProgress(targetStep);
+  updateSummary();
+  updateConfigNav();
+  
+  const stepElement = document.getElementById(`step-${targetStep}`);
+  if (stepElement) {
+    stepElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+function createParticles() {
+  const particleContainer = document.createElement('div');
+  particleContainer.className = 'particles-container';
+  particleContainer.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  `;
+  document.body.prepend(particleContainer);
+  
+  // Detect mobile and reduce particles dramatically
+  const isMobile = window.innerWidth < 768;
+  const particleCount = isMobile ? 20 : 80;
+  
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Random properties
+    const size = Math.random() * 6 + 2; // 2-8px (larger)
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    const duration = Math.random() * 12 + 8; // 8-20s (FASTER - reduced from 15-35s)
+    const delay = Math.random() * 8;
+    const opacity = Math.random() * 0.7 + 0.3; // 0.3-1.0 (brighter)
+    
+    // Random color from teal/cyan spectrum
+    const hue = Math.random() * 40 + 170; // 170-210 (cyan to teal)
+    const saturation = Math.random() * 30 + 70; // 70-100%
+    
+    particle.style.cssText = `
+      position: absolute;
+      width: ${size}px;
+      height: ${size}px;
+      background: radial-gradient(circle, 
+        hsla(${hue}, ${saturation}%, 65%, ${opacity}) 0%,
+        hsla(${hue}, ${saturation}%, 55%, ${opacity * 0.8}) 40%,
+        transparent 70%
+      );
+      border-radius: 50%;
+      left: ${x}%;
+      top: ${y}%;
+      filter: blur(0.5px);
+      box-shadow: 0 0 ${size * 2}px hsla(${hue}, ${saturation}%, 65%, ${opacity * 0.5});
+      animation: float ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s infinite;
+      will-change: transform, opacity;
+    `;
+    
+    particleContainer.appendChild(particle);
+  }
+  
+  // Add accent particles (reduced on mobile)
+  const accentCount = isMobile ? 5 : 15;
+  for (let i = 0; i < accentCount; i++) {
+    const accent = document.createElement('div');
+    accent.className = 'particle-accent';
+    
+    const size = Math.random() * 12 + 8; // 8-20px
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    const duration = Math.random() * 15 + 10; // 10-25s
+    const delay = Math.random() * 10;
+    
+    accent.style.cssText = `
+      position: absolute;
+      width: ${size}px;
+      height: ${size}px;
+      background: radial-gradient(circle,
+        rgba(0, 212, 255, 0.6) 0%,
+        rgba(123, 44, 191, 0.4) 50%,
+        transparent 70%
+      );
+      border-radius: 50%;
+      left: ${x}%;
+      top: ${y}%;
+      filter: blur(2px);
+      animation: float-accent ${duration}s ease-in-out ${delay}s infinite;
+      will-change: transform, opacity;
+    `;
+    
+    particleContainer.appendChild(accent);
+  }
+}
+
+function init() {
+  console.log('App initializing...');
+  
+  createParticles();
+  setupSmoothScroll();
+  setupGameWidget();
+  setupForm();
+  initConfigurator();
+  setupCompleteBuildButton();
+  
+  console.log('App initialized successfully.');
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+    </script>
+</body>
+</html>
