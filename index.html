@@ -45,6 +45,8 @@ nav {
   width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
 }
 
+.mobile-menu-btn { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
 /* Typography & Common */
 section { max-width: 1280px; margin: 0 auto; padding: 4rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.02); }
 h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; background: linear-gradient(to bottom, #fff, #aaa); -webkit-background-clip: text; color: transparent; }
@@ -100,7 +102,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
 .game-select:hover { border-color: var(--primary); background: var(--surface-hover); }
 .game-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
 
-.games-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.games-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
 .game-card {
   background: #111; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
   text-align: center; cursor: pointer; transition: all 0.2s;
@@ -109,7 +111,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
 .game-card h4 { font-size: 1rem; margin-bottom: 0.5rem; }
 .game-card p { font-size: 0.8rem; color: var(--text-dim); }
 .benchmark-display { margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid var(--border); }
-.gpu-benchmarks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.gpu-benchmarks { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
 .gpu-bench-item { text-align: center; padding: 1rem; background: var(--surface); border-radius: 8px; }
 .fps-val { font-size: 2rem; font-weight: 800; color: var(--primary); }
 
@@ -124,7 +126,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
 }
 .progress-step {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
-  position: relative; z-index: 1; flex: 1; cursor: pointer;
+  position: relative; z-index: 1; flex: 1; cursor: pointer; min-width: 60px;
 }
 .step-number {
   width: 50px; height: 50px; border-radius: 50%;
@@ -144,7 +146,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
 .progress-step.completed .step-number::after {
   content: '✓'; position: absolute; color: #000; font-size: 24px; font-weight: 800;
 }
-.step-label { font-size: 12px; color: var(--text-dim); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.step-label { font-size: 12px; color: var(--text-dim); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; text-align: center; }
 .progress-step.active .step-label { color: var(--primary); }
 
 /* Config Grid */
@@ -165,7 +167,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
 }
 .filter-search {
   flex: 1; padding: 10px 14px; background: #0f1012; border: 1px solid var(--border);
-  border-radius: 8px; color: var(--text); font-family: inherit;
+  border-radius: 8px; color: var(--text); font-family: inherit; min-width: 200px;
 }
 .step-filters select {
   padding: 10px 14px; background: #0f1012; border: 1px solid var(--border);
@@ -182,7 +184,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
 .option-card:hover { border-color: var(--primary); background: var(--surface-hover); transform: translateY(-4px); }
 .option-card.selected { border-color: var(--primary); background: var(--primary-glow); }
 .manufacturer-logo {
-  position: absolute; top: 12px; right: 12px; height: 18px; max-width: 70px;
+  position: absolute; top: 12px; right: 12px; height: 16px; max-width: 50px;
   object-fit: contain; filter: brightness(0) invert(1); opacity: 0.7;
 }
 .component-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; padding-right: 60px; color: #fff; line-height: 1.2; }
@@ -247,26 +249,60 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
   margin-bottom: 0.8rem; border: 1px solid var(--border); position: relative;
 }
 
-/* Mobile */
-@media (max-width: 1024px) {
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Navigation */
+  .mobile-menu-btn { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 80px; left: 0; width: 100%;
+    background: var(--surface); flex-direction: column; padding: 1.5rem;
+    border-bottom: 1px solid var(--border); gap: 1.5rem;
+  }
+  .nav-links.active { display: flex; }
+  .nav-links li { width: 100%; text-align: center; }
+  .nav-links a, .nav-cart-button { width: 100%; justify-content: center; }
+
+  /* Hero */
+  .hero h1 { font-size: 2.2rem; }
+  
+  /* Configurator */
   #configurator { grid-template-columns: 1fr; }
-  .config-summary { position: static; margin-bottom: 2rem; }
-  .step-label { display: none; }
-  .config-progress::before { left: 20px; right: 20px; }
-  .hero h1 { font-size: 2.5rem; }
+  .config-summary { position: static; margin-top: 2rem; }
+  
+  /* Progress Bar */
+  .config-progress { 
+    justify-content: flex-start; overflow-x: auto; padding-bottom: 10px; 
+    white-space: nowrap; -webkit-overflow-scrolling: touch;
+  }
+  .config-progress::before { display: none; }
+  .progress-step { flex: 0 0 auto; padding: 0 10px; min-width: auto; }
+  
+  /* Bubble adjustments for mobile */
+  .step-number { width: 36px; height: 36px; font-size: 0.8rem; }
+  .progress-step.completed .step-number::after { font-size: 16px; }
+  .step-label { font-size: 10px; }
+  
+  /* Platforms */
+  .platform-grid { grid-template-columns: 1fr; }
+  .platform-card { padding: 2rem 1.5rem; }
+  
+  /* Components */
+  .component-grid { grid-template-columns: 1fr; }
+  .step-filters { flex-direction: column; }
+  .filter-search { width: 100%; }
 }
     </style>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="#" class="logo">Dream PC</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#pc-ratgeber">Ratgeber</a></li>
-                <li><a href="#pc-konfigurator">Konfigurator</a></li>
-                <li class="nav-cart-button" onclick="toggleCart()">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#pc-ratgeber" onclick="toggleMenu()">Ratgeber</a></li>
+                <li><a href="#pc-konfigurator" onclick="toggleMenu()">Konfigurator</a></li>
+                <li class="nav-cart-button" onclick="toggleCart(); toggleMenu()">
                     Warenkorb <span class="cart-badge" id="cart-count">0</span>
                 </li>
             </ul>
@@ -277,7 +313,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
         <section id="home" class="hero">
             <h1>Dein individueller Gaming-PC</h1>
             <p>Maßgeschneidert, leistungsstark und perfekt auf deine Bedürfnisse abgestimmt.</p>
-            <a href="#pc-konfigurator" class="cta-button">Jetzt konfigurieren</a>
+            <button class="cta-button" onclick="document.getElementById('pc-ratgeber').scrollIntoView({behavior: 'smooth'})">Jetzt konfigurieren</button>
         </section>
 
         <!-- PC Ratgeber Section -->
@@ -349,7 +385,6 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
                 <div class="config-container">
                     <!-- Step 1: Platform -->
                     <div class="config-step" id="step-1">
-                        <!-- Removed H3 Header to align cards up -->
                         <div class="platform-grid">
                             <div class="platform-card" id="plat-amd" onclick="app.selectPlatform('amd')">
                                 <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg" alt="AMD">
@@ -456,6 +491,11 @@ h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
     </div>
 
 <script>
+// Mobile Menu Logic
+function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('active');
+}
+
 // Expanded Database
 const DB = {
   amd_cpus: [
@@ -808,6 +848,5 @@ loop();
 
 app.init();
 </script>
-<script type="module" src="/index.tsx"></script>
 </body>
 </html>
