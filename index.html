@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Dream PC - Dein individueller Gaming-PC</title>
+    <style>
+:root {
+  --bg: #0f1012;
+  --surface: #1a1c1e;
+  --surface-hover: #25282b;
+  --text: #f0f0f0;
+  --text-dim: #a0a0a0;
+  --primary: #00d4ff;
+  --primary-glow: rgba(0, 212, 255, 0.15);
+  --border: #2d3035;
+  --font: "Inter", system-ui, sans-serif;
+  --success: #00ff9d;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.5; padding-top: 80px; }
+
+/* Header & Nav */
+header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  background: rgba(15, 16, 18, 0.85); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+nav {
+  max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; height: 80px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; text-decoration: none;}
+.nav-links { display: flex; gap: 0.5rem; list-style: none; align-items: center; }
+.nav-links a {
+  position: relative; color: var(--text); text-decoration: none;
+  font-weight: 500; padding: 10px 18px; border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.nav-links a:hover { color: var(--primary); background: rgba(0, 212, 255, 0.08); }
+.nav-cart-button { display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--text); font-weight: 500; padding: 10px 18px; border-radius: 8px; transition: all 0.3s ease; }
+.nav-cart-button:hover { background: rgba(0, 212, 255, 0.08); color: var(--primary); }
+.cart-badge {
+  background: var(--primary); color: #000; font-size: 11px; font-weight: 800;
+  width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+
+/* Typography & Common */
+section { max-width: 1280px; margin: 0 auto; padding: 4rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.02); }
+h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; background: linear-gradient(to bottom, #fff, #aaa); -webkit-background-clip: text; color: transparent; }
+h3 { font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text); }
+.hidden { display: none !important; }
+
+/* Hero */
+.hero { text-align: center; padding: 6rem 1rem 4rem; max-width: 900px; margin: 0 auto; border-bottom: none; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1; background: linear-gradient(135deg, #fff 0%, #aaa 100%); -webkit-background-clip: text; color: transparent; }
+.hero p { font-size: 1.25rem; color: var(--text-dim); margin-bottom: 2.5rem; }
+.cta-button {
+  background: var(--primary); color: #000; padding: 14px 32px; border-radius: 8px;
+  text-decoration: none; font-weight: 700; border: none; cursor: pointer; font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s; display: inline-block;
+}
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 0 25px rgba(0, 212, 255, 0.4); }
+.cta-button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; background: #555; }
+
+/* PC Ratgeber */
+.ratgeber-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+.mode-card {
+  background: var(--surface); border: 1px solid var(--border); padding: 2rem;
+  border-radius: 16px; text-align: center; cursor: pointer; transition: all 0.3s ease;
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.mode-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.mode-icon svg { width: 48px; height: 48px; stroke: var(--primary); }
+.mode-card h4 { font-size: 1.25rem; font-weight: 700; }
+.mode-card p { color: var(--text-dim); font-size: 0.9rem; }
+
+/* Game Widget */
+.games-widget { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+.game-controls { display: flex; gap: 1rem; margin-bottom: 2rem; justify-content: center; flex-wrap: wrap; }
+
+/* Styled Select */
+.select-wrapper { position: relative; display: inline-block; }
+.select-wrapper::after {
+  content: ''; 
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  width: 10px; height: 6px;
+  background-color: var(--primary);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  pointer-events: none;
+}
+.game-select { 
+  appearance: none; -webkit-appearance: none;
+  background: var(--surface); color: var(--text); 
+  border: 1px solid var(--border); padding: 12px 40px 12px 16px; 
+  border-radius: 8px; cursor: pointer; 
+  font-family: var(--font); font-size: 1rem; font-weight: 500;
+  transition: all 0.2s ease;
+}
+.game-select:hover { border-color: var(--primary); background: var(--surface-hover); }
+.game-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
+
+.games-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.game-card {
+  background: #111; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
+  text-align: center; cursor: pointer; transition: all 0.2s;
+}
+.game-card:hover, .game-card.selected { border-color: var(--primary); background: var(--primary-glow); }
+.game-card h4 { font-size: 1rem; margin-bottom: 0.5rem; }
+.game-card p { font-size: 0.8rem; color: var(--text-dim); }
+.benchmark-display { margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid var(--border); }
+.gpu-benchmarks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.gpu-bench-item { text-align: center; padding: 1rem; background: var(--surface); border-radius: 8px; }
+.fps-val { font-size: 2rem; font-weight: 800; color: var(--primary); }
+
+/* Konfigurator */
+.config-progress {
+  display: flex; justify-content: center; margin-bottom: 3rem; position: relative;
+  max-width: 800px; margin-left: auto; margin-right: auto; padding: 0 1rem;
+}
+.config-progress::before {
+  content: ''; position: absolute; top: 24px; left: 40px; right: 40px;
+  height: 2px; background: var(--border); z-index: 0;
+}
+.progress-step {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  position: relative; z-index: 1; flex: 1; cursor: pointer;
+}
+.step-number {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--surface); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-size: 1.1rem; color: var(--text-dim);
+}
+.progress-step.active .step-number {
+  border-color: var(--primary); color: var(--primary);
+  background: var(--bg);
+  box-shadow: 0 0 0 4px var(--primary-glow); transform: scale(1.1);
+}
+.progress-step.completed .step-number {
+  background: var(--primary); border-color: var(--primary); color: transparent;
+}
+.progress-step.completed .step-number::after {
+  content: '✓'; position: absolute; color: #000; font-size: 24px; font-weight: 800;
+}
+.step-label { font-size: 12px; color: var(--text-dim); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.progress-step.active .step-label { color: var(--primary); }
+
+/* Config Grid */
+#configurator { display: grid; grid-template-columns: 1fr 360px; gap: 2rem; align-items: start; }
+.config-container { min-height: 400px; }
+.config-summary {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem; position: sticky; top: 100px;
+}
+.summary-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.summary-item:last-child { border-bottom: none; }
+.summary-label { color: var(--text-dim); }
+
+/* Components */
+.step-filters {
+  display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+  background: var(--surface); padding: 12px; border-radius: 12px; border: 1px solid var(--border);
+}
+.filter-search {
+  flex: 1; padding: 10px 14px; background: #0f1012; border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); font-family: inherit;
+}
+.step-filters select {
+  padding: 10px 14px; background: #0f1012; border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); font-family: inherit; cursor: pointer;
+}
+.filter-search:focus, .step-filters select:focus { border-color: var(--primary); outline: none; }
+
+.component-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.option-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.25rem; cursor: pointer; transition: all 0.2s;
+  position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 160px;
+}
+.option-card:hover { border-color: var(--primary); background: var(--surface-hover); transform: translateY(-4px); }
+.option-card.selected { border-color: var(--primary); background: var(--primary-glow); }
+.manufacturer-logo {
+  position: absolute; top: 12px; right: 12px; height: 18px; max-width: 70px;
+  object-fit: contain; filter: brightness(0) invert(1); opacity: 0.7;
+}
+.component-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; padding-right: 60px; color: #fff; line-height: 1.2; }
+.component-specs { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem; flex: 1; line-height: 1.4; }
+.component-price { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-top: auto; }
+.checkmark {
+  position: absolute; top: -8px; right: -8px; width: 24px; height: 24px;
+  background: var(--primary); color: #000; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 900; opacity: 0; transform: scale(0);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 10;
+}
+.option-card.selected .checkmark { opacity: 1; transform: scale(1); }
+
+/* Platform Cards */
+.platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0; }
+.platform-card {
+  background: var(--surface); border: 2px solid var(--border); padding: 2.5rem;
+  border-radius: 16px; text-align: center; cursor: pointer; transition: all 0.2s;
+}
+.platform-card:hover { border-color: var(--primary); transform: translateY(-4px); background: var(--surface-hover); }
+.platform-card.selected { border-color: var(--primary); background: var(--primary-glow); }
+.platform-logo { height: 60px; margin-bottom: 1.5rem; filter: brightness(0) invert(1); }
+
+/* Appointment & Feedback */
+.appointment-form {
+  max-width: 600px; margin: 0 auto; background: var(--surface);
+  padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border);
+}
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-dim); }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 12px; background: #0f1012; border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); font-family: inherit; font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; }
+
+.feedback-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.feedback-card {
+  background: var(--surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border);
+}
+.stars { color: #ffd700; margin-bottom: 0.5rem; }
+
+/* Cart Sidebar */
+.cart-sidebar {
+  position: fixed; top: 0; right: 0; width: 100%; max-width: 400px; height: 100vh;
+  background: #111; z-index: 2000; transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.8); border-left: 1px solid var(--border);
+  display: flex; flex-direction: column;
+}
+.cart-sidebar.open { transform: translateX(0); }
+.cart-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8); z-index: 1500; opacity: 0; visibility: hidden; transition: all 0.3s;
+  backdrop-filter: blur(4px);
+}
+.cart-overlay.open { opacity: 1; visibility: visible; }
+.cart-item {
+  background: var(--surface); padding: 1rem; border-radius: 8px;
+  margin-bottom: 0.8rem; border: 1px solid var(--border); position: relative;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  #configurator { grid-template-columns: 1fr; }
+  .config-summary { position: static; margin-bottom: 2rem; }
+  .step-label { display: none; }
+  .config-progress::before { left: 20px; right: 20px; }
+  .hero h1 { font-size: 2.5rem; }
+}
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Dream PC</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pc-ratgeber">Ratgeber</a></li>
+                <li><a href="#pc-konfigurator">Konfigurator</a></li>
+                <li class="nav-cart-button" onclick="toggleCart()">
+                    Warenkorb <span class="cart-badge" id="cart-count">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Dein individueller Gaming-PC</h1>
+            <p>Maßgeschneidert, leistungsstark und perfekt auf deine Bedürfnisse abgestimmt.</p>
+            <a href="#pc-konfigurator" class="cta-button">Jetzt konfigurieren</a>
+        </section>
+
+        <!-- PC Ratgeber Section -->
+        <section id="pc-ratgeber">
+            <h2>PC Ratgeber</h2>
+            
+            <div class="ratgeber-grid">
+                <div class="mode-card" onclick="document.getElementById('pc-konfigurator').scrollIntoView({behavior:'smooth'})">
+                    <div class="mode-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4>Budget orientiert</h4>
+                    <p>Finde den besten PC für dein Budget.</p>
+                </div>
+                
+                <div class="mode-card" onclick="document.getElementById('pc-konfigurator').scrollIntoView({behavior:'smooth'})">
+                    <div class="mode-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h4>Performance Ziel</h4>
+                    <p>PCs für 144Hz, 4K oder eSports.</p>
+                </div>
+                
+                <div class="mode-card" onclick="document.getElementById('pc-konfigurator').scrollIntoView({behavior:'smooth'})">
+                    <div class="mode-icon">
+                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+                    </div>
+                    <h4>Komponenten Wahl</h4>
+                    <p>Volle Kontrolle über jedes Teil.</p>
+                </div>
+            </div>
+
+            <div class="games-widget">
+                <h3>Performance in aktuellen Spielen</h3>
+                <div class="game-controls">
+                    <div class="select-wrapper">
+                        <select class="game-select" id="game-res" onchange="updateGameBenchmark()">
+                            <option value="1080p">1080p Full HD</option>
+                            <option value="1440p">1440p WQHD</option>
+                            <option value="4k">4K UHD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="games-list">
+                    <div class="game-card" onclick="selectGame('cp2077', this)"><h4>Cyberpunk 2077</h4><p>Ultra Settings</p></div>
+                    <div class="game-card" onclick="selectGame('cod', this)"><h4>Call of Duty MW3</h4><p>High Settings</p></div>
+                    <div class="game-card" onclick="selectGame('fortnite', this)"><h4>Fortnite</h4><p>Epic Settings</p></div>
+                    <div class="game-card" onclick="selectGame('starfield', this)"><h4>Starfield</h4><p>Ultra Settings</p></div>
+                    <div class="game-card" onclick="selectGame('hogwarts', this)"><h4>Hogwarts Legacy</h4><p>Ultra Settings</p></div>
+                    <div class="game-card" onclick="selectGame('rdr2', this)"><h4>RDR 2</h4><p>Ultra Settings</p></div>
+                    <div class="game-card" onclick="selectGame('cs2', this)"><h4>CS 2</h4><p>Competitive</p></div>
+                    <div class="game-card" onclick="selectGame('valorant', this)"><h4>Valorant</h4><p>High Settings</p></div>
+                    <div class="game-card" onclick="selectGame('tlou', this)"><h4>The Last of Us</h4><p>Ultra Settings</p></div>
+                    <div class="game-card" onclick="selectGame('spiderman', this)"><h4>Spider-Man</h4><p>Remastered</p></div>
+                </div>
+                <div id="benchmark-result" class="hidden"></div>
+            </div>
+        </section>
+
+        <!-- Konfigurator Section -->
+        <section id="pc-konfigurator">
+            <h2>PC Konfigurator</h2>
+            
+            <div class="config-progress">
+                <!-- Generated by JS -->
+            </div>
+
+            <div id="configurator">
+                <div class="config-container">
+                    <!-- Step 1: Platform -->
+                    <div class="config-step" id="step-1">
+                        <!-- Removed H3 Header to align cards up -->
+                        <div class="platform-grid">
+                            <div class="platform-card" id="plat-amd" onclick="app.selectPlatform('amd')">
+                                <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg" alt="AMD">
+                                <h4>AMD Ryzen</h4>
+                                <p>AM5 DDR5 - Zukunftssicher & Schnell</p>
+                            </div>
+                            <div class="platform-card" id="plat-intel" onclick="app.selectPlatform('intel')">
+                                <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Intel_logo_2023.svg" alt="Intel">
+                                <h4>Intel Core</h4>
+                                <p>LGA1700 DDR5 - Hohe Single-Core Power</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dynamic Components Container -->
+                    <div id="dynamic-step" class="hidden">
+                        <h3 id="step-title">Komponente</h3>
+                        <div class="step-filters">
+                            <input type="text" class="filter-search" id="comp-search" placeholder="Komponente suchen..." onkeyup="app.filterComponents()">
+                            <select id="comp-sort" onchange="app.filterComponents()">
+                                <option value="price-asc">Preis: Aufsteigend</option>
+                                <option value="price-desc">Preis: Absteigend</option>
+                            </select>
+                        </div>
+                        <div id="comp-grid" class="component-grid"></div>
+                    </div>
+                </div>
+
+                <div class="config-summary">
+                    <h3 style="margin-bottom: 1.5rem;">Deine Konfiguration</h3>
+                    <div id="summary-content"></div>
+                    <div id="summary-total" class="hidden" style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 700; color: #fff;">
+                            <span>Gesamtpreis:</span> <span id="total-price" style="color: var(--primary);">0€</span>
+                        </div>
+                    </div>
+                    <button class="cta-button" id="btn-finish" style="width: 100%; margin-top: 1.5rem;" disabled onclick="app.addToCart()">In den Warenkorb</button>
+                    <div id="compat-msg" style="margin-top: 15px; font-size: 0.9rem; color: var(--success); display:none;">✓ Alle Teile kompatibel</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Section -->
+        <section id="appointment">
+            <h2>Beratungstermin vereinbaren</h2>
+            <div class="appointment-form">
+                <form onsubmit="event.preventDefault(); alert('Danke für deine Anfrage!');">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" required placeholder="Dein Name">
+                    </div>
+                    <div class="form-group">
+                        <label>E-Mail</label>
+                        <input type="email" required placeholder="deine@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Nachricht</label>
+                        <textarea rows="4" placeholder="Erzähl uns von deinen Wünschen..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button" style="width:100%">Termin anfragen</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback">
+            <h2>Kundenfeedback</h2>
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Perfekter Gaming-PC! Die Beratung war erstklassig und der PC läuft absolut flüssig. Cyberpunk 2077 auf Ultra mit über 100 FPS!"</p>
+                    <div style="margin-top:1rem; font-weight:700; color:var(--text-dim);">- Max M.</div>
+                </div>
+                <div class="feedback-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Toller Service und faire Preise. Der Konfigurator hat mir geholfen, den perfekten PC für mein Budget zu finden."</p>
+                    <div style="margin-top:1rem; font-weight:700; color:var(--text-dim);">- Sarah K.</div>
+                </div>
+                <div class="feedback-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Schnelle Lieferung und professioneller Aufbau. Kabelmanagement ist on point!"</p>
+                    <div style="margin-top:1rem; font-weight:700; color:var(--text-dim);">- Tom B.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div style="padding: 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+            <h3>Warenkorb</h3>
+            <button onclick="toggleCart()" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+        </div>
+        <div id="cart-items" style="flex:1; padding: 1.5rem; overflow-y: auto;">
+            <div style="text-align:center; color: var(--text-dim); margin-top: 3rem;">Dein Warenkorb ist leer</div>
+        </div>
+        <div style="padding: 1.5rem; border-top: 1px solid var(--border); background: #000;">
+            <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.2rem; margin-bottom:1rem;">
+                <span>Summe:</span> <span id="cart-sum" style="color:var(--primary)">0€</span>
+            </div>
+            <button class="cta-button" style="width:100%" onclick="alert('Checkout Mockup')">Zur Kasse</button>
+        </div>
+    </div>
+
+<script>
+// Expanded Database
+const DB = {
+  amd_cpus: [
+    { id: 'c1', name: "AMD Ryzen 5 7600X", spec: "6C/12T | 4.7GHz Boost 5.3GHz", price: 215 },
+    { id: 'c2', name: "AMD Ryzen 7 7700X", spec: "8C/16T | 4.5GHz Boost 5.4GHz", price: 295 },
+    { id: 'c3', name: "AMD Ryzen 7 7800X3D", spec: "8C/16T | Best Gaming CPU", price: 369 },
+    { id: 'c4', name: "AMD Ryzen 9 7900X", spec: "12C/24T | Multi-Thread Beast", price: 410 },
+    { id: 'c5', name: "AMD Ryzen 9 7950X", spec: "16C/32T | Workstation Power", price: 540 },
+    { id: 'c6', name: "AMD Ryzen 5 8600G", spec: "6C/12T | iGPU Power", price: 229 },
+    { id: 'c7', name: "AMD Ryzen 7 5700X3D", spec: "8C/16T | AM4 Upgrade Tip", price: 240 }
+  ],
+  intel_cpus: [
+    { id: 'c8', name: "Intel Core i5-13600K", spec: "14C/20T | 3.5GHz", price: 289 },
+    { id: 'c9', name: "Intel Core i5-14600K", spec: "14C/20T | 5.3GHz Boost", price: 309 },
+    { id: 'c10', name: "Intel Core i7-14700K", spec: "20C/28T | Gaming & Work", price: 410 },
+    { id: 'c11', name: "Intel Core i9-14900K", spec: "24C/32T | Ultimate Performance", price: 580 },
+    { id: 'c12', name: "Intel Core i5-12400F", spec: "6C/12T | Budget King", price: 110 },
+    { id: 'c13', name: "Intel Core i3-14100F", spec: "4C/8T | Entry Level", price: 120 }
+  ],
+  motherboards: [
+    { id: 'm1', platform: 'amd', name: "MSI PRO B650-S WiFi", spec: "ATX | AM5 | DDR5", price: 155 },
+    { id: 'm2', platform: 'amd', name: "Gigabyte B650 Gaming X AX", spec: "ATX | AM5 | Top P/L", price: 175 },
+    { id: 'm3', platform: 'amd', name: "ASUS ROG Strix B650E-F", spec: "ATX | AM5 | PCIe 5.0", price: 275 },
+    { id: 'm4', platform: 'amd', name: "ASRock X670E Steel Legend", spec: "ATX | AM5 | White", price: 310 },
+    { id: 'm5', platform: 'intel', name: "Gigabyte Z790 UD AC", spec: "ATX | LGA1700 | DDR5", price: 210 },
+    { id: 'm6', platform: 'intel', name: "MSI MAG Z790 Tomahawk WiFi", spec: "ATX | LGA1700 | Best Seller", price: 290 },
+    { id: 'm7', platform: 'intel', name: "ASUS Prime B760-PLUS", spec: "ATX | LGA1700 | Budget", price: 150 },
+    { id: 'm8', platform: 'intel', name: "ASUS ROG Maximus Z790 Hero", spec: "ATX | LGA1700 | Enthusiast", price: 650 }
+  ],
+  ram: [
+    { id: 'r1', name: "Corsair Vengeance 32GB Kit", spec: "DDR5-6000 CL30 | Grey", price: 115 },
+    { id: 'r2', name: "G.Skill Trident Z5 Neo 32GB", spec: "DDR5-6000 CL30 | RGB", price: 135 },
+    { id: 'r3', name: "Kingston Fury Beast 16GB", spec: "DDR5-5200 | Budget", price: 65 },
+    { id: 'r4', name: "Corsair Dominator Titanium 64GB", spec: "DDR5-6600 | High-End", price: 350 },
+    { id: 'r5', name: "TeamGroup T-Force Delta 32GB", spec: "DDR5-6000 | White RGB", price: 125 }
+  ],
+  gpus: [
+    { id: 'g1', name: "NVIDIA GeForce RTX 4060", spec: "8GB | 1080p Gaming", price: 300 },
+    { id: 'g2', name: "NVIDIA GeForce RTX 4060 Ti", spec: "8GB | 1080p High", price: 390 },
+    { id: 'g3', name: "AMD Radeon RX 7700 XT", spec: "12GB | 1440p Entry", price: 430 },
+    { id: 'g4', name: "AMD Radeon RX 7800 XT", spec: "16GB | 1440p Value King", price: 520 },
+    { id: 'g5', name: "NVIDIA GeForce RTX 4070 Super", spec: "12GB | 1440p Raytracing", price: 620 },
+    { id: 'g6', name: "NVIDIA GeForce RTX 4070 Ti Super", spec: "16GB | 1440p/4K", price: 840 },
+    { id: 'g7', name: "AMD Radeon RX 7900 XTX", spec: "24GB | 4K Native", price: 980 },
+    { id: 'g8', name: "NVIDIA GeForce RTX 4080 Super", spec: "16GB | 4K High-End", price: 1050 },
+    { id: 'g9', name: "NVIDIA GeForce RTX 4090", spec: "24GB | Ultimate", price: 1850 }
+  ],
+  storage: [
+    { id: 's1', name: "Samsung 980 Pro 1TB", spec: "M.2 NVMe Gen4 | 7000MB/s", price: 90 },
+    { id: 's2', name: "WD Black SN850X 2TB", spec: "M.2 NVMe Gen4 | 7300MB/s", price: 155 },
+    { id: 's3', name: "Lexar NM790 4TB", spec: "M.2 NVMe Gen4 | Budget Big", price: 240 },
+    { id: 's4', name: "Crucial P3 Plus 1TB", spec: "M.2 NVMe Gen4 | Entry", price: 65 },
+    { id: 's5', name: "Seagate FireCuda 530 2TB", spec: "M.2 NVMe Gen4 | Durability", price: 175 }
+  ],
+  psu: [
+    { id: 'p1', name: "be quiet! Pure Power 12 M 750W", spec: "80+ Gold | Modular | ATX 3.0", price: 105 },
+    { id: 'p2', name: "Corsair RM850e 850W", spec: "80+ Gold | ATX 3.0", price: 115 },
+    { id: 'p3', name: "MSI MAG A850GL 850W", spec: "80+ Gold | PCIe 5.0", price: 120 },
+    { id: 'p4', name: "Seasonic Vertex GX-1000 1000W", spec: "80+ Gold | Premium", price: 190 },
+    { id: 'p5', name: "be quiet! Dark Power 13 1000W", spec: "80+ Titanium | Silent", price: 260 },
+    { id: 'p6', name: "Corsair RM750x Shift", spec: "80+ Gold | Side Connectors", price: 130 }
+  ]
+};
+
+const steps = [
+    { id: 'platform', label: 'Plattform', title: 'Plattform' },
+    { id: 'cpu', label: 'CPU', title: 'Prozessor' },
+    { id: 'mb', label: 'Mainboard', title: 'Mainboard' },
+    { id: 'ram', label: 'RAM', title: 'Arbeitsspeicher' },
+    { id: 'gpu', label: 'GPU', title: 'Grafikkarte' },
+    { id: 'ssd', label: 'Speicher', title: 'SSD' },
+    { id: 'psu', label: 'Netzteil', title: 'Netzteil' }
+];
+
+const app = {
+    state: {
+        platform: null,
+        selections: {}, 
+        currentStepIdx: 0,
+        maxStepIdx: 0,
+        cart: []
+    },
+
+    init() {
+        this.renderProgress();
+        this.renderSummary();
+    },
+
+    renderProgress() {
+        const container = document.querySelector('.config-progress');
+        container.innerHTML = steps.map((s, i) => `
+            <div class="progress-step ${i === this.state.currentStepIdx ? 'active' : ''} ${i < this.state.currentStepIdx ? 'completed' : ''}" 
+                 onclick="app.goToStep(${i})">
+                <div class="step-number">${i+1}</div>
+                <div class="step-label">${s.label}</div>
+            </div>
+        `).join('');
+    },
+
+    goToStep(idx) {
+        if(idx > this.state.maxStepIdx) return;
+        this.state.currentStepIdx = idx;
+        
+        document.getElementById('step-1').classList.add('hidden');
+        document.getElementById('dynamic-step').classList.add('hidden');
+        
+        this.renderProgress();
+
+        if (idx === 0) {
+            document.getElementById('step-1').classList.remove('hidden');
+        } else {
+            this.renderDynamicStep(idx);
+        }
+    },
+
+    selectPlatform(plat) {
+        this.state.platform = plat;
+        this.state.selections = {}; 
+        this.state.maxStepIdx = 1;
+        
+        document.querySelectorAll('.platform-card').forEach(c => c.classList.remove('selected'));
+        document.getElementById(`plat-${plat}`).classList.add('selected');
+        
+        this.goToStep(1);
+    },
+
+    renderDynamicStep(idx) {
+        const stepId = steps[idx].id;
+        document.getElementById('dynamic-step').classList.remove('hidden');
+        document.getElementById('step-title').innerText = `Wähle ${steps[idx].title}`;
+        
+        let data = [];
+        if(stepId === 'cpu') data = this.state.platform === 'amd' ? DB.amd_cpus : DB.intel_cpus;
+        else if(stepId === 'mb') data = DB.motherboards.filter(m => m.platform === this.state.platform);
+        else if(stepId === 'ram') data = DB.ram;
+        else if(stepId === 'gpu') data = DB.gpus;
+        else if(stepId === 'ssd') data = DB.storage;
+        else if(stepId === 'psu') data = DB.psu;
+
+        this.currentData = data;
+        this.filterComponents();
+    },
+
+    filterComponents() {
+        const term = document.getElementById('comp-search').value.toLowerCase();
+        const sort = document.getElementById('comp-sort').value;
+        
+        let filtered = this.currentData.filter(i => i.name.toLowerCase().includes(term));
+        if(sort === 'price-asc') filtered.sort((a,b) => a.price - b.price);
+        else filtered.sort((a,b) => b.price - a.price);
+
+        const container = document.getElementById('comp-grid');
+        const currentSelectionId = this.state.selections[steps[this.state.currentStepIdx].id]?.id;
+
+        container.innerHTML = filtered.map(item => `
+            <div class="option-card ${item.id === currentSelectionId ? 'selected' : ''}" 
+                 onclick="app.selectComponent('${item.id}')">
+                <div class="checkmark">✓</div>
+                ${this.getLogo(item.name)}
+                <div class="component-name">${item.name}</div>
+                <div class="component-specs">${item.spec}</div>
+                <div class="component-price">${item.price}€</div>
+            </div>
+        `).join('');
+    },
+
+    getLogo(name) {
+        let src = '';
+        if(name.includes('AMD') || name.includes('Radeon')) src = "https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg";
+        else if(name.includes('Intel')) src = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg";
+        else if(name.includes('NVIDIA') || name.includes('RTX')) src = "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg";
+        else if(name.includes('Corsair')) src = "https://upload.wikimedia.org/wikipedia/commons/4/4d/Corsair_logo_2020.svg";
+        else if(name.includes('MSI')) src = "https://upload.wikimedia.org/wikipedia/commons/f/f5/MSI_Logo.svg";
+        else if(name.includes('Gigabyte')) src = "https://upload.wikimedia.org/wikipedia/commons/c/c3/Gigabyte_Technology_logo_20080107.svg";
+        else if(name.includes('ASRock')) src = "https://upload.wikimedia.org/wikipedia/commons/e/e9/ASRock_logo_201x.svg";
+        else if(name.includes('ASUS') || name.includes('ROG')) src = "https://upload.wikimedia.org/wikipedia/commons/2/20/ASUS_Logo.svg";
+        else if(name.includes('Samsung')) src = "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg";
+        else if(name.includes('WD') || name.includes('Western Digital')) src = "https://upload.wikimedia.org/wikipedia/commons/9/90/Western_Digital_logo.svg";
+        else if(name.includes('Kingston')) src = "https://upload.wikimedia.org/wikipedia/commons/a/a2/Kingston_Technology_logo_2022.svg";
+        else if(name.includes('G.Skill')) src = "https://upload.wikimedia.org/wikipedia/commons/d/de/G.Skill_logo.svg";
+        else if(name.includes('Seasonic')) src = "https://upload.wikimedia.org/wikipedia/commons/e/e5/Seasonic_Logo.svg";
+        else if(name.includes('be quiet')) src = "https://upload.wikimedia.org/wikipedia/commons/f/f3/Be_quiet%21_logo.svg";
+        else if(name.includes('Lexar')) src = "https://upload.wikimedia.org/wikipedia/commons/9/91/Lexar_Logo.png";
+        else if(name.includes('TeamGroup')) src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/TeamGroup_Logo.png/800px-TeamGroup_Logo.png";
+        else if(name.includes('Crucial')) src = "https://upload.wikimedia.org/wikipedia/commons/7/75/Crucial_Logo.svg";
+        else if(name.includes('Seagate')) src = "https://upload.wikimedia.org/wikipedia/commons/6/69/Seagate_logo.svg";
+
+        return src ? `<img class="manufacturer-logo" src="${src}" onerror="this.style.display='none'">` : '';
+    },
+
+    selectComponent(itemId) {
+        const item = this.currentData.find(i => i.id === itemId);
+        const stepKey = steps[this.state.currentStepIdx].id;
+        
+        this.state.selections[stepKey] = item;
+        this.renderSummary();
+        
+        if(this.state.currentStepIdx < steps.length - 1) {
+            this.state.maxStepIdx = Math.max(this.state.maxStepIdx, this.state.currentStepIdx + 1);
+            setTimeout(() => this.goToStep(this.state.currentStepIdx + 1), 250);
+        } else {
+            document.getElementById('btn-finish').disabled = false;
+        }
+    },
+
+    renderSummary() {
+        const container = document.getElementById('summary-content');
+        let total = 0;
+        let html = '';
+        
+        steps.forEach(step => {
+            const item = this.state.selections[step.id];
+            if(item) {
+                total += item.price;
+                html += `
+                <div class="summary-item">
+                    <span class="summary-label">${step.title}</span>
+                    <span style="font-weight:600">${item.name}</span>
+                </div>`;
+            }
+        });
+
+        container.innerHTML = html || '<div style="color:var(--text-dim); text-align:center;">Wähle Komponenten...</div>';
+        
+        if(total > 0) {
+            document.getElementById('summary-total').classList.remove('hidden');
+            document.getElementById('total-price').innerText = total + '€';
+            document.getElementById('compat-msg').style.display = 'block';
+        }
+    },
+
+    addToCart() {
+        if(!this.state.selections.cpu) return;
+        const total = document.getElementById('total-price').innerText;
+        const configName = `PC Konfiguration (${this.state.selections.cpu.name} + ${this.state.selections.gpu?.name || 'GPU'})`;
+        
+        this.state.cart.push({ name: configName, price: total });
+        this.updateCartUI();
+        toggleCart();
+    },
+
+    updateCartUI() {
+        document.getElementById('cart-count').innerText = this.state.cart.length;
+        const container = document.getElementById('cart-items');
+        
+        if(this.state.cart.length === 0) {
+            container.innerHTML = '<div style="text-align:center; color: var(--text-dim); margin-top: 3rem;">Dein Warenkorb ist leer</div>';
+            document.getElementById('cart-sum').innerText = '0€';
+            return;
+        }
+
+        container.innerHTML = this.state.cart.map((item, i) => `
+            <div class="cart-item">
+                <div style="font-weight:700; margin-bottom:4px; font-size:0.95rem;">${item.name}</div>
+                <div style="display:flex; justify-content:space-between; color: var(--primary);">
+                    <span style="font-weight:700">${item.price}</span>
+                    <button onclick="app.removeFromCart(${i})" style="color:var(--text-dim); background:none; border:none; cursor:pointer; font-size:0.85rem; text-decoration:underline;">Entfernen</button>
+                </div>
+            </div>
+        `).join('');
+        
+        const total = this.state.cart.reduce((acc, item) => acc + parseInt(item.price), 0);
+        document.getElementById('cart-sum').innerText = total + '€';
+    },
+
+    removeFromCart(idx) {
+        this.state.cart.splice(idx, 1);
+        this.updateCartUI();
+    }
+};
+
+// Game Benchmarks Logic
+const benchmarks = {
+    'cp2077': { '1080p': { rtx4060: 65, rtx4070: 95, rtx4090: 165 }, '1440p': { rtx4060: 45, rtx4070: 70, rtx4090: 140 }, '4k': { rtx4060: 25, rtx4070: 42, rtx4090: 95 } },
+    'cod': { '1080p': { rtx4060: 155, rtx4070: 195, rtx4090: 280 }, '1440p': { rtx4060: 110, rtx4070: 145, rtx4090: 240 }, '4k': { rtx4060: 65, rtx4070: 90, rtx4090: 180 } },
+    'fortnite': { '1080p': { rtx4060: 180, rtx4070: 240, rtx4090: 350 }, '1440p': { rtx4060: 120, rtx4070: 165, rtx4090: 280 }, '4k': { rtx4060: 70, rtx4070: 100, rtx4090: 195 } },
+    'starfield': { '1080p': { rtx4060: 60, rtx4070: 85, rtx4090: 155 }, '1440p': { rtx4060: 42, rtx4070: 65, rtx4090: 125 }, '4k': { rtx4060: 24, rtx4070: 38, rtx4090: 78 } },
+    'hogwarts': { '1080p': { rtx4060: 70, rtx4070: 100, rtx4090: 175 }, '1440p': { rtx4060: 48, rtx4070: 72, rtx4090: 140 }, '4k': { rtx4060: 27, rtx4070: 42, rtx4090: 88 } },
+    'rdr2': { '1080p': { rtx4060: 65, rtx4070: 95, rtx4090: 165 }, '1440p': { rtx4060: 45, rtx4070: 68, rtx4090: 132 }, '4k': { rtx4060: 25, rtx4070: 40, rtx4090: 85 } },
+    'cs2': { '1080p': { rtx4060: 280, rtx4070: 350, rtx4090: 500 }, '1440p': { rtx4060: 200, rtx4070: 280, rtx4090: 450 }, '4k': { rtx4060: 120, rtx4070: 180, rtx4090: 320 } },
+    'valorant': { '1080p': { rtx4060: 350, rtx4070: 450, rtx4090: 500 }, '1440p': { rtx4060: 280, rtx4070: 380, rtx4090: 500 }, '4k': { rtx4060: 180, rtx4070: 260, rtx4090: 450 } },
+    'tlou': { '1080p': { rtx4060: 55, rtx4070: 82, rtx4090: 148 }, '1440p': { rtx4060: 38, rtx4070: 60, rtx4090: 118 }, '4k': { rtx4060: 22, rtx4070: 35, rtx4090: 75 } },
+    'spiderman': { '1080p': { rtx4060: 85, rtx4070: 125, rtx4090: 205 }, '1440p': { rtx4060: 60, rtx4070: 92, rtx4090: 165 }, '4k': { rtx4060: 35, rtx4070: 55, rtx4090: 108 } }
+};
+
+let selectedGame = null;
+
+function selectGame(gameId, el) {
+    selectedGame = gameId;
+    document.querySelectorAll('.game-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    updateGameBenchmark();
+}
+
+function updateGameBenchmark() {
+    if(!selectedGame) return;
+    const res = document.getElementById('game-res').value;
+    const data = benchmarks[selectedGame][res];
+    const container = document.getElementById('benchmark-result');
+    
+    container.classList.remove('hidden');
+    container.innerHTML = `
+        <div class="benchmark-display">
+            <h4 style="margin-bottom:1rem; text-align:center;">FPS Erwartung (${res.toUpperCase()})</h4>
+            <div class="gpu-benchmarks">
+                <div class="gpu-bench-item">
+                    <div style="font-weight:700; margin-bottom:5px;">RTX 4060</div>
+                    <div class="fps-val">${data.rtx4060}</div>
+                    <div style="font-size:0.8rem; color:var(--text-dim)">FPS</div>
+                </div>
+                <div class="gpu-bench-item">
+                    <div style="font-weight:700; margin-bottom:5px;">RTX 4070</div>
+                    <div class="fps-val">${data.rtx4070}</div> <!-- Placeholder logic -->
+                    <div style="font-size:0.8rem; color:var(--text-dim)">FPS</div>
+                </div>
+                 <div class="gpu-bench-item">
+                    <div style="font-weight:700; margin-bottom:5px;">RTX 4090</div>
+                    <div class="fps-val">${data.rtx4090}</div>
+                    <div style="font-size:0.8rem; color:var(--text-dim)">FPS</div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function toggleCart() {
+    document.getElementById('cart-sidebar').classList.toggle('open');
+    document.getElementById('cart-overlay').classList.toggle('open');
+}
+
+// Particle Background
+const cvs = document.createElement('canvas');
+cvs.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;';
+document.body.appendChild(cvs);
+const ctx = cvs.getContext('2d');
+let parts = [];
+function rs() { cvs.width=window.innerWidth; cvs.height=window.innerHeight; }
+window.onresize=rs; rs();
+for(let i=0;i<50;i++) parts.push({x:Math.random()*cvs.width,y:Math.random()*cvs.height,s:Math.random()*2,vy:-0.2-Math.random()*0.3});
+function loop(){
+    ctx.clearRect(0,0,cvs.width,cvs.height);
+    ctx.fillStyle='#00d4ff';
+    parts.forEach(p=>{
+        p.y+=p.vy; if(p.y<0)p.y=cvs.height;
+        ctx.globalAlpha=0.3; ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fill();
+    });
+    requestAnimationFrame(loop);
+}
+loop();
+
+app.init();
+</script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
